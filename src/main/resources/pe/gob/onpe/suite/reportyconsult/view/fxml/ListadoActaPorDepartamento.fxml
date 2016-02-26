@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="948.0" styleClass="reporconsult_acta_por_departamento_ap_main" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.ListadoActaPorDepartamentoController">
+    <children>
+        <AnchorPane styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <Pane layoutX="26.0" layoutY="51.0" prefHeight="34.0" prefWidth="550.0" styleClass="ap_background-color_purple" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+                    <children>
+                        <Label fx:id="lblCabecera" alignment="CENTER" layoutY="4.0" prefHeight="27.0" prefWidth="640.0" styleClass="lbl_titulo_agrupador" text="Critero de Seleccion">
+<font>
+<Font size="10.0" />
+</font></Label>
+                    </children>
+                </Pane>
+                <Pane fx:id="paneSelection" layoutX="26.0" layoutY="85.0" prefHeight="176.0" prefWidth="550.0" styleClass="ap_background-color_white" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+<children><Label fx:id="labelHidden" layoutX="106.0" layoutY="152.0" prefHeight="21.0" prefWidth="339.0" />
+</children></Pane>
+                <AnchorPane layoutY="321.0" prefHeight="61.0" prefWidth="597.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <HBox layoutX="399.0" layoutY="-31.0" prefHeight="100.0" prefWidth="184.0" styleClass="hbox_botones" AnchorPane.rightAnchor="14.0">
+                            <children>                    
+                                <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                                <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

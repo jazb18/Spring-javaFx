@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="322.0" prefWidth="800.0" styleClass="reporconsult_Tiem_Digi_Acta" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.TiempoDigitacionActaController">
+    <children>
+        <AnchorPane layoutX="32.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <Pane fx:id="paneSeleccion" layoutX="14.0" layoutY="14.0" prefHeight="148.0" prefWidth="760.0" styleClass="ap_background-color_white" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0" />
+                <Pane layoutX="15.0" layoutY="183.0" prefHeight="55.0" prefWidth="200.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                        <HBox layoutX="363.0" layoutY="298.0" prefHeight="65.0" prefWidth="179.0" styleClass="hbox_botones" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="15.0">
+                            <children>
+                                <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="71.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                                <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="77.0" styleClass="btn_salir" text="SALIR" />
+                            </children>
+                        </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

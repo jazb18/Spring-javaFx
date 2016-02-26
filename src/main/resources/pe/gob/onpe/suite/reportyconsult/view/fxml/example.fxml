@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="35.0" prefWidth="600.0" styleClass="ap_background-color_purple,resplandor_ap_main" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.exampleController">
+    <children>
+        <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="32.0" text="Button" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        <Label fx:id="date" layoutX="534.0048828125" layoutY="9.0" text="Label" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="47.0" AnchorPane.topAnchor="0.0" />
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../../svn/06%20Fuentes/suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

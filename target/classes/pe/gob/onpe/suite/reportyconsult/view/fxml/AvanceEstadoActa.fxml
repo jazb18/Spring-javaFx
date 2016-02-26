@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="reporconsult_estadoacta_ap_main" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.AvanceEstadoActaController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <Pane layoutX="15.0" layoutY="48.0" prefHeight="38.0" prefWidth="603.0" styleClass="ap_background-color_purple" AnchorPane.leftAnchor="15.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="7.0" prefHeight="24.0" prefWidth="603.0" styleClass="lbl_titulo_agrupador" text="Criterio de Selección" textAlignment="CENTER" />
+                    </children>
+                </Pane>
+                <Pane layoutY="48.0" prefHeight="38.0" prefWidth="496.0" styleClass="ap_background-color_purple" AnchorPane.leftAnchor="628.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="7.0" prefHeight="24.0" prefWidth="496.0" styleClass="lbl_titulo_agrupador" text="Tipo de Reporte" />
+                    </children>
+                </Pane>
+                <Pane layoutX="706.0" layoutY="48.0" prefHeight="38.0" prefWidth="403.0" styleClass="ap_background-color_purple" AnchorPane.rightAnchor="15.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="7.0" prefHeight="24.0" prefWidth="403.0" styleClass="lbl_titulo_agrupador" text="Conf. de Actualización de Datos" />
+                    </children>
+                </Pane>
+                <Pane fx:id="paneSeleccion" layoutY="83.0" prefHeight="164.0" prefWidth="603.0" styleClass="ap_background-color_white" AnchorPane.leftAnchor="15.0" />
+                <Pane layoutX="598.0" layoutY="83.0" prefHeight="93.0" prefWidth="496.0" styleClass="ap_background-color_white" AnchorPane.leftAnchor="628.0">
+                    <children>
+                        <RadioButton fx:id="radioButtonCentroC" layoutX="180.0" layoutY="24.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="182.0" styleClass="lbl_color" text="Por Centro de Cómputo">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="consultaToggleGrp" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="radioButtonOdpe" layoutX="180.0" layoutY="54.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="100.0" styleClass="lbl_color" text="Por ODPE" toggleGroup="$consultaToggleGrp" />
+                    </children>
+                </Pane>
+                <Pane layoutX="706.0" layoutY="83.0" prefHeight="93.0" prefWidth="403.0" styleClass="ap_background-color_white" AnchorPane.rightAnchor="15.0">
+                    <children>
+                        <Label layoutX="85.0" layoutY="30.0" styleClass="lbl_color" text="Cada: " />
+                        <Label layoutX="186.0048828125" layoutY="30.0" styleClass="lbl_color" text="minutos" />
+                        <TextField fx:id="loadTime" layoutX="130.0" layoutY="28.0" prefWidth="50.0" text="5" />
+                        <Button layoutX="251.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnActualizarOnAction" prefHeight="52.0" prefWidth="64.0" styleClass="btn_actualizar" text="ACTUALIZAR" />
+                    </children>
+                </Pane>
+                <AnchorPane layoutY="508.0" prefHeight="59.0" prefWidth="842.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <HBox layoutX="706.0" layoutY="-31.0" prefHeight="65.0" prefWidth="278.0" styleClass="hbox_botones" AnchorPane.rightAnchor="15.0">
+                            <children>
+                                <Button fx:id="btnConsultar" mnemonicParsing="false" onAction="#btnConsultarOnAction" prefHeight="83.0" prefWidth="185.0" styleClass="btn_consultar" text="CONSULTAR" />
+                                <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                                <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+                <Pane layoutX="486.0" layoutY="182.0" prefHeight="65.0" prefWidth="909.0" styleClass="ap_background-color_white" AnchorPane.rightAnchor="15.0">
+                    <children>
+                        <Label layoutX="180.0048828125" layoutY="22.5" styleClass="lbl_color" text="Por Procesar:" />
+                        <Label layoutX="350.0" layoutY="24.0" styleClass="lbl_color" text="Procesadas:" />
+                        <Label layoutX="508.0" layoutY="23.0" styleClass="lbl_color" text="Contabilizada:" />
+                        <TextField fx:id="porProcesar" editable="false" layoutX="274.0" layoutY="23.0" prefWidth="61.0" styleClass="ap_background-color_naranja,txt-field" />
+                        <TextField fx:id="procesadas" editable="false" layoutX="433.0" layoutY="23.0" prefWidth="61.0" styleClass="ap_background-color_amarillo,txt-field" />
+                        <TextField fx:id="contabilizadas" editable="false" layoutX="607.0" layoutY="23.0" prefWidth="61.0" styleClass="ap_background-color_verde,txt-field" />
+                    </children>
+                </Pane>
+                <TableView fx:id="TableCentroComputo" layoutY="259.0" prefHeight="260.0" prefWidth="973.0" styleClass="ap_background-color_white" visible="false" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="259.0">
+                    <columns>
+                        <TableColumn fx:id="codigoC" maxWidth="1.7976931348623157E308" minWidth="-1.0" resizable="false" styleClass="table-cell" text="Código" />
+                        <TableColumn fx:id="descripcionC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="360.0" resizable="false" styleClass="table-cell" text="Centro de Cómputo" />
+                        <TableColumn fx:id="TipoC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="60.0" resizable="false" styleClass="table-cell" text="Tipo" />
+                        <TableColumn fx:id="ultimaModifC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="220.0" resizable="false" styleClass="table-cell" text="Ultima Modificación" />
+                        <TableColumn fx:id="totalActaC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="Total de &#10;Actas" />
+                        <TableColumn fx:id="actaLotizadaC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="Actas &#10;Lotizadas" />
+                        <TableColumn fx:id="actaProcesC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="Actas &#10;Procesadas" />
+                        <TableColumn fx:id="totalActaProcC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text=" (%) Actas &#10;Proc." />
+                        <TableColumn fx:id="actaContabC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="Actas &#10;Contabiliz." />
+                        <TableColumn fx:id="totalActaContC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="(%) Actas &#10;Contabiliz." />
+                        <TableColumn fx:id="actaObservC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="Actas &#10;Observadas" />
+                        <TableColumn fx:id="totalActaObservC" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="(%) Actas &#10;Observ." />
+                    </columns>
+                </TableView>
+                <TextField fx:id="resulTotalActaObserv" alignment="CENTER" editable="false" layoutX="1435.0" layoutY="522.0" prefWidth="101.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+                <TextField fx:id="resultActaObserv" alignment="CENTER" editable="false" layoutX="1335.0" layoutY="522.0" prefWidth="101.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+                <TextField fx:id="resulTotalActaCont" alignment="CENTER" editable="false" layoutX="1235.0" layoutY="522.0" prefWidth="101.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+                <TextField fx:id="resultActaContab" alignment="CENTER" editable="false" layoutX="1135.0" layoutY="522.0" prefWidth="101.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+                <TextField fx:id="resulTotalActaProc" alignment="CENTER" editable="false" layoutX="1035.0" layoutY="522.0" prefWidth="101.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+                <TextField fx:id="resulActaProces" alignment="CENTER" editable="false" layoutX="935.0" layoutY="522.0" prefWidth="101.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+                <TextField fx:id="resulTotalActaC" alignment="CENTER" editable="false" layoutX="736.0" layoutY="522.0" prefWidth="100.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0">
+<opaqueInsets>
+<Insets />
+</opaqueInsets></TextField>
+                <TextField fx:id="resulActaLotizada" alignment="CENTER" editable="false" layoutX="835.0" layoutY="522.0" prefWidth="101.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+                <TextField fx:id="resulTotalActaO" alignment="CENTER" editable="false" layoutX="835.0" layoutY="522.0" prefWidth="101.0" styleClass="txt-field_sin_border" visible="false" AnchorPane.bottomAnchor="120.0" />
+                <TableView fx:id="TableODPE" layoutY="259.0" prefHeight="260.0" prefWidth="973.0" styleClass="ap_background-color_white" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="259.0">
+                    <columns>
+                        <TableColumn fx:id="codigoO" maxWidth="1.7976931348623157E308" minWidth="-1.0" resizable="false" styleClass="table-cell" text="Código" />
+                        <TableColumn fx:id="descripcionO" prefWidth="520.0" resizable="false" styleClass="table-cell" text="ODPE" />
+                        <TableColumn fx:id="ultimaModifO" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="220.0" resizable="false" styleClass="table-cell" text="Ultima Modificación" />
+                        <TableColumn fx:id="totalActasO" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="Total de &#10;Actas" />
+                        <TableColumn fx:id="ActaProcesadaO" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="Actas &#10;Procesadas" />
+                        <TableColumn fx:id="totalActasProcO" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text=" (%) Actas &#10;Proc." />
+                        <TableColumn fx:id="actaContabO" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="Actas &#10;Contabil." />
+                        <TableColumn fx:id="totalActaContabO" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="(%) Actas &#10;Contabil." />
+                        <TableColumn fx:id="actaObservadasO" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="Actas &#10;Observadas" />
+                        <TableColumn fx:id="totalActaObservadasO" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" resizable="false" styleClass="table-cell" text="(%) Actas &#10;Observ." />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

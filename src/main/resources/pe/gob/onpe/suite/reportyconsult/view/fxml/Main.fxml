@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="489.0" styleClass="ap_body_main_repconsult" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.MainController">  
+    <children>
+        <ImageView layoutX="27.0" layoutY="616.0" pickOnBounds="true" preserveRatio="true" styleClass="img_logo_onpe" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="10.0" />
+        <Pane layoutX="136.0" layoutY="240.0" prefHeight="8.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="136.0" />
+        <Button cancelButton="true" layoutX="1273.0" layoutY="645.0" mnemonicParsing="false" onAction="#btnSalirOnAction" styleClass="btn_salir_main" text="SALIR" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="50.0" />
+        <AnchorPane prefHeight="17.0" styleClass="ap_background-color_dorado" AnchorPane.bottomAnchor="-12.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+        <SplitPane dividerPositions="0.15, 0.35, 0.55, 0.8, 0.9" layoutX="1293.0" layoutY="809.0" prefHeight="28.0" prefWidth="392.0" styleClass="sp_status_bar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <items>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblODPE" layoutY="2.0" styleClass="text_fill_white" text="ODPE: " AnchorPane.leftAnchor="30.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblCentroComputo" layoutY="2.0" styleClass="text_fill_white" text="Centro de Cómputo: " AnchorPane.leftAnchor="30.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblUsuario" layoutY="2.0" styleClass="text_fill_white" text="Usuario: " AnchorPane.leftAnchor="30.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0">
+               <children>
+                  <Label fx:id="lblEstacion" layoutY="2.0" styleClass="text_fill_white" text="Estación:  " AnchorPane.leftAnchor="35.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="26.0" prefWidth="80.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Label fx:id="lblFecha" layoutY="2.0" styleClass="text_fill_white" text="01/01/1900" AnchorPane.leftAnchor="35.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="26.0" prefWidth="646.0">
+               <children>
+                  <Label fx:id="lblHora" layoutY="2.0" styleClass="text_fill_white" text="12:00 PM" AnchorPane.rightAnchor="35.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>   
+    </children>
+    <stylesheets>
+        <URL value="@../css/mainLocal.css" />
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+    </stylesheets>
+</AnchorPane>

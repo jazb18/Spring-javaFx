@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="reporconsult_resumen_total_ap_main,ap_background-color_gainsboro" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.ResumenTotalCentroComputoController">
+    <children><AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+<children>
+        <Pane layoutX="26.0" layoutY="55.0" prefHeight="34.0" prefWidth="552.0" styleClass="ap_background-color_purple">
+            <children>
+                <Label layoutX="206.0" layoutY="8.0" prefHeight="23.0" prefWidth="159.0" styleClass="lbl_titulo" text="Criterio de Selección" />
+            </children>
+        </Pane>
+        <AnchorPane fx:id="anchorPaneCentral" layoutX="26.0" layoutY="89.0" prefHeight="246.0" prefWidth="552.0" styleClass="ap_background-color_white">
+            <children>
+               <RadioButton fx:id="radioButtonEnPorcentaje" layoutX="145.0537109375" layoutY="219.0" mnemonicParsing="false" selected="true" styleClass="lbl_color" text="En Porcentajes">
+                    <toggleGroup>
+                         <ToggleGroup fx:id="consultaToggleGrp" />
+                    </toggleGroup>
+               </RadioButton>
+               <RadioButton fx:id="radioButtonEnCifras" layoutX="305.5439453125" layoutY="219.0" mnemonicParsing="false" styleClass="lbl_color" text="En Cifras" toggleGroup="$consultaToggleGrp" />
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutY="392.0" prefHeight="64.0" prefWidth="600.0" styleClass="ap_background-color_electricbue">
+            <children>
+                <HBox layoutX="402.0" layoutY="-33.0" prefHeight="65.0" prefWidth="184.0" styleClass="hbox_botones">
+                    <children>
+                        <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                        <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+                    </children>
+                </HBox><Label fx:id="mensaje" layoutX="27.0048828125" layoutY="5.5" text=" " textFill="#d31212" />
+            </children>
+        </AnchorPane>
+</children></AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

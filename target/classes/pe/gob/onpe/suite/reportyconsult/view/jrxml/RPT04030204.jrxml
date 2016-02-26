@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportResumenActas" columnCount="6" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="92" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30a7cec1-6ccd-49bb-9cdb-f209e2950a79">
+	<property name="ireport.zoom" value="1.5026296018031553"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="tituloPrincipal" class="java.lang.String"/>
+	<parameter name="tituloSecundario" class="java.lang.String"/>
+	<parameter name="servidor" class="java.lang.String"/>
+	<parameter name="usuario" class="java.lang.String"/>
+	<parameter name="estacion" class="java.lang.String"/>
+	<parameter name="reporte" class="java.lang.String"/>
+	<parameter name="sinvaloroficial" class="java.lang.String"/>
+	<parameter name="url_imagen" class="java.io.InputStream"/>
+	<parameter name="descCompu" class="java.lang.String"/>
+	<parameter name="tipoEleccion" class="java.lang.String"/>
+	<parameter name="version" class="java.lang.String"/>
+	<field name="c_desc_dist_elec" class="java.lang.String"/>
+	<field name="c_dist_elec" class="java.lang.String"/>
+	<field name="c_desc_agrupol" class="java.lang.String"/>
+	<field name="c_codi_agrupol" class="java.lang.String"/>
+	<field name="nomb_candidato" class="java.lang.String"/>
+	<field name="cod_candidato" class="java.lang.String"/>
+	<field name="cod_prov" class="java.lang.String"/>
+	<field name="desc_prov" class="java.lang.String"/>
+	<field name="cod_dist" class="java.lang.String"/>
+	<field name="desc_dist" class="java.lang.String"/>
+	<field name="c_nume_acta" class="java.lang.String"/>
+	<field name="voto_pref_obt" class="java.lang.Integer"/>
+	<variable name="Sum_Voto_pref_obt" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{voto_pref_obt}]]></variableExpression>
+	</variable>
+	<group name="GroupDepartamento">
+		<groupExpression><![CDATA[$F{c_dist_elec}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<rectangle>
+					<reportElement x="24" y="0" width="513" height="20" backcolor="#E0E0E0" uuid="b3b027aa-9ee9-4df6-a2a1-2cd021f7c2ee"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="261" y="0" width="267" height="20" uuid="eeaef0a8-9f2d-438c-b7ea-156a02d12d4f"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{c_desc_dist_elec}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="41" y="1" width="108" height="19" uuid="75cc1305-e074-481f-b651-a7217036b9b9"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Distrito Electoral:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="156" y="0" width="97" height="20" uuid="43eb2d60-5719-435e-979f-1c249a3b2073"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{c_dist_elec}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="49">
+				<staticText>
+					<reportElement x="56" y="15" width="118" height="10" uuid="af310f42-ce2e-46e7-a90c-3b238b201315"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[TOTAL DISTRITO ELECTORAL:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="184" y="15" width="97" height="20" uuid="aefd5a38-da58-4728-a988-211f745c7cde"/>
+					<textElement verticalAlignment="Top">
+						<font fontName="Arial" size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{Sum_Voto_pref_obt}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="GroupProvincia">
+		<groupExpression><![CDATA[$F{c_codi_agrupol}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<rectangle>
+					<reportElement x="24" y="0" width="513" height="20" backcolor="#E0E0E0" uuid="ec58076b-fb24-460f-bcc0-d7c2fad1a6c8"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="261" y="0" width="267" height="20" uuid="5df499fa-4dd5-4b15-a71e-518dd21252b5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{c_desc_agrupol}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="42" y="0" width="107" height="20" uuid="7b72ee3e-caff-4778-a425-f42b5abaa20d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Agrupación Política:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="156" y="0" width="97" height="20" uuid="53a20e42-c4f3-4b2f-8e35-0abb12b91d57"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{c_codi_agrupol}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<group name="GroupDistrito">
+		<groupExpression><![CDATA[$F{cod_candidato}]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<rectangle>
+					<reportElement x="24" y="0" width="513" height="20" backcolor="#E0E0E0" uuid="4509fbe7-63d6-4b28-9657-a02f1e02bd71"/>
+					<graphicElement>
+						<pen lineWidth="0.5"/>
+					</graphicElement>
+				</rectangle>
+				<textField>
+					<reportElement x="261" y="0" width="267" height="20" uuid="2eb3b4b1-8a63-4e85-a66c-c854381a3a23"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nomb_candidato}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="41" y="0" width="108" height="20" uuid="f78c0d3b-fd88-4348-8b44-8938631e6620"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Candidato:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="156" y="0" width="97" height="20" uuid="99a9af55-bca0-4c7c-a4f4-57b302f1b4dd"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cod_candidato}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<group name="GroupHeaderGrid">
+		<groupExpression><![CDATA[$F{cod_prov}]]></groupExpression>
+		<groupHeader>
+			<band height="26">
+				<rectangle>
+					<reportElement x="34" y="3" width="494" height="20" forecolor="#E0E0E0" backcolor="#E0E0E0" uuid="ed60ee7e-4a63-44c6-8206-fd8cfce6b631"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="41" y="3" width="108" height="20" uuid="3b423f0d-c376-4d6a-8f59-794928fb8556"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[Provincia:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="156" y="4" width="97" height="20" uuid="65001a96-f7c0-49b7-ba7b-fd7cb342db2b"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cod_prov}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="261" y="4" width="97" height="20" uuid="4ab9ba8b-1160-4471-9048-fc218e4270de"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{desc_prov}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="20">
+				<rectangle>
+					<reportElement x="157" y="2" width="240" height="15" forecolor="#E0E0E0" backcolor="#E0E0E0" uuid="3f0468c7-8033-4ddd-b1ad-61bade0226e7"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="162" y="5" width="119" height="10" forecolor="#000000" backcolor="#E0E0E0" uuid="023c3da7-4436-4210-8b64-77e30f2b75c0"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[Total Votos Obtenidos Provincia:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="294" y="5" width="97" height="10" backcolor="#E0E0E0" uuid="87abb39d-5b50-4c87-814a-8ba62bec0191"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{Sum_Voto_pref_obt}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="GroupEstadoMesa">
+		<groupExpression><![CDATA[$F{cod_dist}]]></groupExpression>
+		<groupHeader>
+			<band height="38">
+				<staticText>
+					<reportElement x="56" y="3" width="32" height="10" uuid="f9f9de63-3a65-436b-8c47-f06a416803f6"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[Distrito:]]></text>
+				</staticText>
+				<line>
+					<reportElement x="56" y="18" width="472" height="1" uuid="c028ba9b-8f45-4ad9-b3b5-c987b086f35b"/>
+				</line>
+				<staticText>
+					<reportElement x="56" y="24" width="56" height="10" uuid="5c6bca87-229e-44fe-863e-e4d3430f34c1"/>
+					<textElement>
+						<font fontName="Arial" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Mesas / Votos]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="157" y="0" width="97" height="18" uuid="f60efbaf-6c49-4a26-8edf-dc3bbf3af3a3"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{cod_dist}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="261" y="0" width="97" height="18" uuid="a58f62a3-6971-411e-81f4-3e690b114cc7"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{desc_dist}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="20">
+				<rectangle>
+					<reportElement x="157" y="3" width="240" height="15" forecolor="#000000" backcolor="#FFFFFF" uuid="e289bee2-a7fd-4800-9f32-91efcf35d5de"/>
+				</rectangle>
+				<staticText>
+					<reportElement x="162" y="6" width="113" height="10" uuid="ea947a28-e0fa-49ef-b3d0-b104ce3d95dd"/>
+					<textElement>
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<text><![CDATA[Total Votos Obtenidos Distrito:]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="294" y="6" width="97" height="10" uuid="a4e841f7-677c-4876-a44b-a75c6b79cb68"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{Sum_Voto_pref_obt}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band height="802" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{sinvaloroficial}!=""]]></printWhenExpression>
+			<textField>
+				<reportElement mode="Transparent" x="26" y="288" width="502" height="227" forecolor="#C0C0C0" backcolor="#9999FF" uuid="1dcb0398-fa07-4c24-8e60-a87c812470bc">
+					<property name="ireport.layer" value="2"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="72"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sinvaloroficial}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="134" splitType="Stretch">
+			<staticText>
+				<reportElement x="22" y="96" width="125" height="15" uuid="0334fbdd-6de4-47a1-a0f4-2d4f6856625a"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CENTRO DE COMPUTO :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="157" y="96" width="151" height="15" uuid="16928856-758e-435f-baee-48b204b8d594"/>
+				<textElement>
+					<font fontName="Arial" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{descCompu}]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Blank">
+				<reportElement x="0" y="0" width="80" height="80" uuid="c3b1c0f8-f60b-4472-8d49-014735356599"/>
+				<imageExpression><![CDATA[$P{url_imagen}]]></imageExpression>
+			</image>
+			<textField evaluationTime="Report">
+				<reportElement x="501" y="34" width="40" height="15" uuid="52a4ba91-ea21-4bec-8726-c8eebd9c58bb"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss">
+				<reportElement x="476" y="18" width="65" height="15" uuid="60847bd7-1b0d-427c-850e-412507d1decf"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="441" y="34" width="35" height="15" uuid="a318d538-fcd1-4492-b5e1-d0d78282c6fc"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Página:]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="476" y="1" width="65" height="15" uuid="cadb176a-8a02-43b9-a299-98c03afabb65"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="442" y="18" width="34" height="15" uuid="3af8c893-dd14-4a98-a878-66705a8215bc"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora   :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="1" width="35" height="15" uuid="15f5d2d0-f6d0-44d7-aa8f-f80dd98b41f5"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="88" y="45" width="346" height="18" forecolor="#000000" uuid="db6a5697-b032-41fe-a1fe-963d230c81d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tituloSecundario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="0" width="346" height="18" forecolor="#666666" uuid="1fed5166-8e7a-4007-8ecb-7c2545c23961"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tituloPrincipal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="477" y="34" width="24" height="15" uuid="215defd9-5d33-49c1-8946-bca6371a01cf"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + " de"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="88" y="22" width="346" height="18" forecolor="#000000" uuid="68286817-0876-4c96-9d9f-cdb19361fa11"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tipoEleccion}.equals("10")? "PRESIDENTE Y VICEPRESIDENTE" :
+$P{tipoEleccion}.equals("11")? "CONGRESALES":
+$P{tipoEleccion}.equals("12")? "PARLAMENTO ANDINO" :
+$P{tipoEleccion}.equals("CO")? "CONSOLIDADO" :""]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="20">
+			<textField>
+				<reportElement x="56" y="0" width="67" height="20" uuid="76170316-02b3-4140-bead-c28b7a71a765"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isUnderline="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c_nume_acta}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="125" y="0" width="75" height="20" uuid="8cb48185-78e6-4b0d-a015-106714cf5053"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{voto_pref_obt}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="34" splitType="Stretch">
+			<staticText>
+				<reportElement x="5" y="3" width="40" height="15" uuid="471d4ed2-4c99-4807-be61-3f9b473b5a85"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Servidor :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="340" y="3" width="96" height="27" uuid="3e9b3dac-19e0-4aa0-972f-ab38c2092788"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{estacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="440" y="3" width="47" height="15" uuid="fc8f6d40-d60d-4ec2-971d-08f2c9950994"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="200" y="3" width="81" height="27" uuid="dbee664b-211c-40f2-a809-2c2d398a6af0"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{usuario}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="163" y="3" width="36" height="15" uuid="59e4b469-f79c-4838-ae05-c943368284e3"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Usuario :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="46" y="3" width="110" height="27" uuid="af1fb30c-7592-4471-aa8d-67f8d8ad34ec"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{servidor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="3" width="49" height="15" uuid="fccc04c1-f677-4951-9b12-c766083632bb"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reporte}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="298" y="3" width="41" height="15" uuid="601201e1-ef51-484a-ab34-39de78376a1e"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estación :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="439" y="18" width="50" height="15" uuid="c442f9cd-c305-4165-91ae-cca7b4ef3f56"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Versión  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="486" y="18" width="51" height="15" uuid="cc3be881-75cc-45cd-b1bc-ce316d34ef6d"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{version}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,588 @@
+
+
+.admseg_p_usuarioclaveconf{
+    -fx-background-color: #FFFFFF;
+}
+
+.admseg_p_parametros_acceso{
+    -fx-background-color: #FFFFFF;   
+    -fx-border-color: #C1C8E5;
+}
+
+.admseg_mod_ap_main{
+    -fx-pref-height: 462px;
+    -fx-pref-width: 902px; 
+}
+
+.admseg_um_ap_main{
+    -fx-pref-height: 401px; //se le aumento 30 px.  
+    -fx-pref-width: 902px;     
+}
+
+.admseg_pa_ap_main{
+    -fx-pref-height: 308px;
+    -fx-pref-width: 902px; 
+    //   -fx-background-image: url("../image/parametros.png");
+}
+
+.admseg_per_ap_main{
+    -fx-pref-height: 434px;
+    -fx-pref-width: 902px; 
+}
+
+.admseg_uam_ap_main{
+    -fx-pref-height: 438px;
+    -fx-pref-width: 902px;     
+}
+
+.admseg_aum_ap_main{
+    -fx-pref-height: 467px;
+    -fx-pref-width: 902px; 
+    //-fx-background-image: url("../image/asignacionusuariosmodulos.png");
+}
+.reporconsult_ciud_y_ausent{
+    /*-fx-pref-height: 394px;*/
+    -fx-pref-height: 350px;
+    -fx-pref-width: 881px; 
+    /*    -fx-background-image: url("../image/CiudadanosqueVotaron.png");*/
+}
+
+.reporconsult_sufr_y_vot{
+    -fx-pref-height: 394px;
+    -fx-pref-width: 881px; 
+    /*    -fx-background-image: url("../image/CiudadanosqueVotaron.png");*/
+}
+
+.reporconsult_avanc_result_elect{
+    /*-fx-pref-height: 704px;*/
+    -fx-pref-height: 900px;
+    -fx-pref-width: 1300px; 
+    /*    -fx-background-image: url("../image/CiudadanosqueVotaron.png");*/
+}
+
+.reporconsult_mesas_Est_Mesa{
+    -fx-pref-height: 350px;
+    -fx-pref-width: 800px; 
+}
+.reporconsult_mesa_x_Mesa{
+    -fx-pref-height: 350px;
+    -fx-pref-width: 881px; 
+}
+
+.reporconsult_Tiem_Digi_Acta{
+    -fx-pref-height: 300px;
+    -fx-pref-width: 800px; 
+}
+
+.reporconsult_Prd_x_Dig{
+    -fx-pref-height: 350px;
+    -fx-pref-width: 700px; 
+}
+
+.reporconsult_Act_ReDig{
+    -fx-pref-height: 300px;
+    -fx-pref-width: 700px; 
+}
+
+.reporconsult_Repor_Barr_Elect{
+    -fx-pref-height: 300px;
+    -fx-pref-width: 650px; 
+}
+
+.admseg_mca_ap_main{
+    -fx-pref-height: 314px;
+    -fx-pref-width: 902px;     
+}
+
+.admseg_ca_ap_main{
+    -fx-pref-height: 419px;
+    -fx-pref-width: 902px;     
+}
+
+.admseg_mct_ap_main{
+    -fx-pref-height: 309px;
+    -fx-pref-width: 902px;     
+}
+
+.admseg_mra_ap_main{
+    -fx-pref-height: 313px;
+    -fx-pref-width: 902px;     
+}
+
+.admseg_cr_ap_main{
+    -fx-pref-height: 357px;
+    -fx-pref-width: 902px;     
+}
+
+.admseg_mrt_ap_main{
+    -fx-pref-height: 311px;
+    -fx-pref-width: 902px;     
+}
+
+.admseg_macs_ap_main{
+    -fx-pref-height: 311px;
+    -fx-pref-width: 902px; 
+    //-fx-background-image: url("../image/masistentecopiaseguridad.png");
+}
+
+.admseg_cs_ap_main{
+    -fx-pref-height: 314px;
+    -fx-pref-width: 902px; 
+    //-fx-background-image: url("../image/copiaseguridad.png");
+}
+
+.ap_borderTop{
+    -fx-background-color:  #306785;
+    -fx-pref-height: 35px;
+    -fx-pref-width:677px; 
+}
+.ap_button_mesa{
+    -fx-pref-width: 50;
+    -fx-pref-height: 50;
+}
+
+.ap_background-color_gainsboro{
+    -fx-background-color:  #E0E0E0;
+}
+
+.ap_background-color_SteelBlue{
+    -fx-background-color:  #47678D;
+}
+
+.ap_background-color_purple{
+    -fx-background-color:  #C1C8E5;
+}
+
+.ap_background-color_white{
+    -fx-background-color:  #FFFFFF;
+}
+
+.ap_background-color_electricbue{
+    -fx-background-color:  #306783;
+}
+
+.ap_background-color_naranja{
+    -fx-background-color:  #FFBF81;
+}
+
+.ap_background-color_amarillo{
+    -fx-background-color:  #FFFFBF;
+}
+
+.ap_background-color_verde{
+    -fx-background-color:  #95C47C;
+}
+
+.ap_background-color_dorado{
+    -fx-background-color:  #B18B23;
+}
+
+.ap_borderbody{
+    -fx-pref-width:677px; 
+}
+
+.admseg_monac_ap_main{
+    -fx-pref-height: 980px;
+    -fx-pref-width: 1860px; 
+    //-fx-background-image: url("../image/masistentecopiaseguridad.png");
+}
+
+.reporconsult_cifra_repartidora{
+    -fx-pref-height: 918px;
+    -fx-pref-width: 1019px; 
+    //  -fx-background-image: url("../image/copiaseguridad.jpg");
+}
+
+
+.reporconsult_pcr_ap_main{
+    -fx-pref-height: 918px;
+    -fx-pref-width: 952px; 
+    //  -fx-background-image: url("../image/copiaseguridad.jpg");
+}
+
+.reporconsult_monitoreoinfo_ap_main{
+    -fx-pref-height: 900px;
+    -fx-pref-width: 1300px;  //902
+    //  -fx-background-image: url("../image/copiaseguridad.jpg");
+}
+
+.reporconsult_relapuesta_ap_main{
+    -fx-pref-height: 900px;
+    -fx-pref-width: 1300px; 
+    //-fx-background-image: url("../image/copiaSegurarRelacion.jpg");
+}
+.reporconsult_estadoacta_ap_main{
+    -fx-pref-height: 900px;
+    -fx-pref-width: 1563px;
+    //   -fx-background-image: url("../image/SeguridadAvanceEstadoActas2.png");
+}
+
+.reporconsult_prob_cand_elect{
+    -fx-pref-height: 900px;
+    -fx-pref-width: 1392px; 
+    //   -fx-background-image: url("../image/SeguridadAvanceEstadoActas2.png");
+}
+.reporconsult_resumen_total_ap_main{
+    -fx-pref-height: 456px;
+    -fx-pref-width: 597px; 
+    //-fx-background-image: url("../image/SeguridadResumentotal.png");
+}
+
+.reporconsult_resumen_estado_actas_ap_main{
+    -fx-pref-height: 900px;
+    -fx-pref-width: 1300px;
+    //-fx-background-image: url("../image/SeguridadResumenEstadoActas.png");
+}
+
+.reporconsult_acta_por_departamento_ap_main{
+    -fx-pref-height: 382px;
+    -fx-pref-width: 700px; 
+    //-fx-background-image: url("../image/SeguridadActaPorDepartamento.png");
+}
+
+.reporconsult_resumen_acta_conta_ap_main{
+    -fx-pref-height: 309px;
+    -fx-pref-width: 595px; 
+    //-fx-background-image: url("../image/SeguridadResumenAvanceConta.png");
+}
+.reporconsult_total_acta_obs_x_cc{
+    -fx-pref-height: 379px;
+    -fx-pref-width: 700px; 
+}
+
+.reporconsult_resumen_historico_acta_ap_main{
+    -fx-pref-height: 400px;
+    -fx-pref-width: 700px; 
+}
+
+.reporconsult_resultado_lotizacion_actas{
+    -fx-pref-height: 400px;
+    -fx-pref-width: 595px; 
+}
+
+.reporconsult_resumen_result_acta_ap_main{
+    -fx-pref-height: 820px;
+    -fx-pref-width: 1100px;
+    //-fx-background-image: url("../image/indianaJones.png");
+}
+.reporconsult_resumen_result_ap_main{
+    /*-fx-pref-height: 625px;*/
+    -fx-pref-height: 850px;
+    -fx-pref-width: 881px; 
+    /*-fx-background-image: url("../image/ResumenResultado.png");*/
+}
+
+.reporconsult_avanc_vot_pref_main{
+    /*-fx-pref-height: 625px;*/
+    -fx-pref-height: 380px;
+    -fx-pref-width: 617px; 
+    /*-fx-background-image: url("../image/ResumenResultado.png");*/
+}
+
+.btn_eliminar {
+    -fx-pref-width: 73px;
+    -fx-pref-height: 83px;
+    -fx-background-position: top center;
+    -fx-font-family: "Roboto Condensed";
+    -fx-font-size: 14px;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 0 0 -63 0;    
+    -fx-text-alignment: center;
+}
+
+.btn_report{
+    -fx-pref-width: 85;
+    -fx-pref-height: 25;
+    -fx-background-color:#AE8006;
+    -fx-font-family: Arial;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 11pt; //boceto dice 16.5pt
+    -fx-padding: -1;
+}
+
+.btn_report:hover, .btn_report:focused {
+    -fx-background-color:#D89F00;      
+}
+
+.txt_field{
+    -fx-border-color: #7385CD;
+    -fx-border-width: 1.0px;  
+    -fx-font-family: "Roboto Condensed";
+    -fx-font-size: 10pt; //boceto dice 14pt
+    -fx-text-fill: #767676; 
+    -fx-padding: -1 15 -1 15;
+    -fx-pref-height: 18;
+
+}
+.lbl_reduce{
+    -fx-font-family: "Arial Narrow";
+    -fx-font-size:11pt;
+    -fx-text-fill: #001B3F;
+    -fx-font-weight: regular ;
+}
+
+.lbl_standar{
+    -fx-font-family: "Roboto Condensed";
+    -fx-font-size:12pt;
+    -fx-text-fill: #001B3F;
+    -fx-font-weight: regular ;
+}
+
+.lbl_color{
+    -fx-font-family: "Roboto Condensed";
+    -fx-text-fill: #001B3F;
+    -fx-font-weight: regular ;
+    -fx-font-size: 12pt;
+}
+.lbl_color_white{
+    -fx-font-family: "Roboto Condensed";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: regular ;
+    -fx-font-size: 12pt;
+}
+
+.lbl_color_gris{
+    -fx-font-family: "Arial Narrow";
+    -fx-text-fill: #909090;
+    -fx-font-weight: regular ;
+}
+
+.lbl_color_gris_monitoreo{
+    -fx-font-family: "Arial Narrow";
+    -fx-text-fill: #909090;
+    -fx-font-weight: regular ;
+    -fx-font-size: 11pt;
+}
+
+.lbl_color_blue{
+    -fx-font-family: "Roboto Condensed";
+    -fx-text-fill: #001B3F;
+    -fx-font-size: 12pt;
+    -fx-font-weight: normal;
+    -fx-background-color: #BBC2DF
+}
+.pane_color_grid{
+    -fx-background-color: #FFFFFF;  
+    -fx-border-width: 0 0.5 0.5 0;
+    -fx-border-color: #C1C8E5;
+    -fx-pref-height : 33px;
+}
+.pane_color_label_grid{
+    -fx-text-fill:#666666; 
+    -fx-font-family:  "Roboto Condensed";
+    -fx-font-size: 12pt;        //boceto dice 12pt
+    -fx-padding: 0 0 0 0;
+}
+
+.lbl_titulo{
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-font-family: "Roboto Condensed";
+    -fx-text-fill: #001B3F;
+}
+
+.lbl_sub_titulo{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-font-family: "Roboto Condensed";
+    -fx-text-fill: #001B3F;
+}
+
+.lbl_subtitulo_aplicativo_RC{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 16pt;
+    -fx-font-family: "Roboto Condensed";
+    -fx-font-weight: regular ;
+}
+
+
+.txt-field{
+    -fx-border-color: #7385CD;
+    -fx-border-width: 1.2px;  
+    -fx-font-family: "Roboto Condensed";
+    -fx-font-size: 11pt; //boceto dice 14pt
+    -fx-text-fill: #767676; 
+    -fx-padding: -1 15 -1 15;
+    -fx-pref-height: 23;
+
+}
+
+.txt-field_sin_border{
+    -fx-border-color: #7385CD;
+    -fx-border-width: 0px;  
+    -fx-font-family: "Roboto Condensed";
+    -fx-font-size: 11pt; //boceto dice 14pt
+    -fx-text-fill: #767676; 
+    -fx-padding: -1 15 -1 15;
+    -fx-pref-height: 23;
+
+}
+
+.ap_avance_estado_actas .table-view .column-header .label {
+    /*-fx-text-fill: #8B8B8B;
+    -fx-alignment:  center-left;    
+    -fx-padding: 0 0 0 15;
+    -fx-font-family: Arial;*/
+    -fx-font-size: 11px;
+}
+.white_space{
+    white-space: pre-line;
+}
+
+.btn_gold{
+    -fx-background-color:#AE8006;
+    -fx-font-family: Arial;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 10pt; //boceto dice 16.5pt
+    //-fx-padding: -10;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-style: solid;
+}
+
+.btn_gold:hover, .btn_gold:focused {
+    -fx-background-color:#D89F00;      
+}
+
+.lbl_reduce_negrita{
+    -fx-font-family: "Arial Narrow";
+    -fx-font-size:9pt;
+    -fx-text-fill: #000000;
+    -fx-font-weight: regular ;
+}
+
+.lbl_reduce_negrita_mediano{
+    -fx-font-family: "Roboto Condensed";
+    -fx-font-size:10pt;
+    -fx-text-fill: #000000;
+    -fx-font-weight: regular ;
+}
+
+.lbl_negrita{
+    -fx-font-family: "Arial";
+    -fx-font-size: 10pt;
+    -fx-text-fill: #000000;
+    -fx-font-weight: Bold ;
+}
+
+
+.lbl_Gris_RRAE{
+    -fx-font-family: "Roboto Condensed";
+    -fx-font-size: 12pt;
+    -fx-text-fill: #666666;
+    -fx-font-weight: regular;
+}
+
+.lbl_underbarra{
+    -fx-font-family: "Arial Narrow";
+    -fx-font-size:11pt;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: regular ;
+}
+
+
+.btn_resolucion, .btn_procesar_CR, .btn_consolidado {
+    -fx-pref-width: 100px;
+    -fx-pref-height: 83px;
+    -fx-background-position: top center ;
+    -fx-font-family: "Roboto Condensed";
+    -fx-font-size: 12px;
+    -fx-text-fill: #FFFFFF;
+    -fx-padding: 0 0 -42 0;    
+    -fx-text-alignment: center;
+}
+
+.btn_consolidado{    
+    -fx-background-image: url("../image/btn_consolidado.png"); 
+    -fx-text-fill: #ffffff;
+}
+
+.btn_consolidado:hover{
+    -fx-background-image: url("../image/btn_consolidado_on.png");
+    -fx-text-fill: #ffffff;
+}
+
+.btn_procesar_CR{    
+    -fx-background-image: url("../image/btn_procesar_CR.png"); 
+    -fx-text-fill: #ffffff;
+}
+
+.btn_procesar_CR:hover{
+    -fx-background-image: url("../image/btn_procesar_CR_on.png");
+    -fx-text-fill: #ffffff;
+}
+
+.btn_resolucion{    
+    -fx-background-image: url("../image/btn_resolucion.png"); 
+    -fx-text-fill: #ffffff;
+}
+
+.btn_resolucion:hover{
+    -fx-background-image: url("../image/btn_resolucion_on.png");
+    -fx-text-fill: #ffffff;
+}
+
+.custom-align{
+    -fx-alignment: CENTER-RIGHT;
+    -fx-font-family: "Arial Narrow";
+    -fx-font-size:12pt;
+}
+
+/*TABLE VIEW - INI*/
+.table-view {
+    -fx-background-color: transparent;       
+    -fx-border-color: #C1C8E5; 
+    -fx-padding: -1 0 0 0; //elimina espacio entre borde de la cabecera y borde de la tabla   
+    -fx-table-cell-border-color: #C1C8E5;
+}
+
+/*Color del texto de la fila seleccionada*/
+/*.table-row-cell:selected .table-cell {
+    -fx-text-fill: #ff0000;    
+} */
+.padding{
+    -fx-padding: 0 0 0 20;
+}
+
+.column-header{
+    -fx-background-color: #BBC2DF;        
+    -fx-border-color: transparent #001B3F transparent transparent; //linea vertical que separa los headers
+    -fx-pref-min-height : 32px;
+    -fx-pref-max-height : 60px;
+    /*-fx-pref-height : 35px;*/
+}
+
+/*filled:focused:*/
+.table-row-cell:selected {
+    -fx-background-color: #B5D9FF;   
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-cell {
+    -fx-text-fill:#656565; 
+    -fx-font-family:  "Arial Narrow";
+    -fx-font-size: 12pt;        //boceto dice 12pt
+    -fx-padding: 0 0 0 20;
+    -fx-alignment: center;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #001B3F;    
+    -fx-font-size: 13pt; //boceto dice 16pt    
+    -fx-font-family: "Roboto Condensed";        
+    -fx-font-weight: normal;
+    -fx-line-spacing: -5px;
+    -fx-padding: 2 0 2 0;
+}
+
+.table-row-cell{
+    -fx-background-color: #FFFFFF;  
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: #C1C8E5;
+    -fx-pref-height : 28px;
+}
+
+
+.hbox_botones{
+    -fx-spacing: 34;
+    -fx-pref-height: 83;    
+}

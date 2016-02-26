@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="reporconsult_prob_cand_elect" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.ProbablesCandidatosElectosController">
+    <children>
+        <AnchorPane layoutX="-98.0" layoutY="-20.0" prefHeight="200.0" prefWidth="200.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <TableView fx:id="tablaPrincipal" layoutX="24.0" layoutY="283.0" prefHeight="250.0" prefWidth="830.0" styleClass="ap_background-color_white" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="283.0">
+                    <columns>
+                        <TableColumn fx:id="dElectoral" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="150.0" text="Distrito Electoral" />
+                        <TableColumn fx:id="oPolitica" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="300.0" text="Organización Política" />
+                        <TableColumn fx:id="nCandidato" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="300.0" text="Nombre del Candidato" />
+                        <TableColumn fx:id="dIdentidad" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Doc.&#10;Identidad" />
+                        <TableColumn fx:id="vPreferencial" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Votos&#10;Pref" />
+                        <TableColumn fx:id="ordOriginal" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Orden Lista&#10;Original" />
+                        <TableColumn fx:id="ordObtenido" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Orden Lista&#10;Obtenido" />
+                        <TableColumn fx:id="estado" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Estado" />
+                        <TableColumn fx:id="cargo" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Cargo" />
+                    </columns>
+                </TableView>
+                <Pane layoutX="24.0" layoutY="55.0" prefHeight="34.0" prefWidth="486.0" styleClass="ap_background-color_purple" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="4.0" prefHeight="24.0" prefWidth="1352.0" styleClass="lbl_titulo_agrupador" text="Criterio de Selección" />
+                    </children>
+                </Pane>
+                <Pane fx:id="paneSeleccion" layoutX="24.0" layoutY="89.0" prefHeight="177.0" prefWidth="486.0" styleClass="ap_background-color_white" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                <Label layoutX="14.0048828125" layoutY="567.0" styleClass="lbl_color" text="V = Candidato elegido por voto preferencial" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="15.0" />
+                <Label layoutX="297.0048828125" layoutY="567.0" styleClass="lbl_color" text="L = Candidato elegido por orden en lista" AnchorPane.bottomAnchor="100.0" />
+                <Label layoutX="558.0048828125" layoutY="567.0" styleClass="lbl_color" text="G = Candidato obtuvo una curul por sorteo" AnchorPane.bottomAnchor="100.0" />
+                <AnchorPane layoutY="600.0" prefHeight="64.0" prefWidth="882.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <HBox layoutY="-32.0" prefHeight="100.0" prefWidth="278.0" styleClass="hbox_botones" AnchorPane.rightAnchor="15.0">
+                            <children>
+                                <Button fx:id="btnConsultar" mnemonicParsing="false" onAction="#btnConsultarOnAction" prefHeight="83.0" prefWidth="185.0" styleClass="btn_consultar" text="CONSULTAR" />
+                                <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                                <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+<Label layoutX="835.0" layoutY="567.0" styleClass="lbl_color" text="E = Candidato con Empate" AnchorPane.bottomAnchor="100.0" />
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

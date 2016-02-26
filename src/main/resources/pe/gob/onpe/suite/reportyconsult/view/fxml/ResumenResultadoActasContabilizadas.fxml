@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="reporconsult_resumen_result_acta_ap_main,ap_background-color_gainsboro" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.ResumenResultadoActasContabilizadasController">
+    <children><AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+<children>
+        <Pane layoutY="606.0" prefHeight="66.0" prefWidth="882.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <HBox layoutX="776.0" layoutY="-26.0" prefHeight="100.0" prefWidth="278.0" styleClass="hbox_botones">
+                    <children>
+                        <Button fx:id="btnConsultar" mnemonicParsing="false" onAction="#btnConsultarOnAction" prefHeight="83.0" prefWidth="185.0" styleClass="btn_consultar" text="CONSULTAR" />
+                        <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                        <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+                    </children>
+                </HBox>
+            </children>
+        </Pane>
+        <Pane layoutX="24.0" layoutY="40.0" prefHeight="34.0" prefWidth="1027.0" styleClass="ap_background-color_purple" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="60.0">
+            <children>
+                <Label layoutX="429.0" layoutY="7.0" styleClass="lbl_titulo_agrupador" text="Criterio de Selección" />
+            </children>
+        </Pane>
+        <Pane fx:id="panelSeleccion" layoutX="24.0" layoutY="75.0" prefHeight="167.0" prefWidth="1027.0" styleClass="ap_background-color_white" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="94.0" />
+        <TabPane fx:id="tabPanePrincipal" layoutX="25.0" layoutY="263.0" prefHeight="435.0" prefWidth="1040.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="273.0">
+            <tabs>
+                <Tab fx:id="tabResultados" text="Resultados">
+                    <content>
+                        <AnchorPane fx:id="anchorPaneTable" prefHeight="412.0" prefWidth="1040.0" />
+                    </content>
+                </Tab>
+                <Tab text="Resumen de Acta y Mesas">
+                    <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                            <children><Label layoutX="40.0" layoutY="183.0" styleClass="lbl_reduce_negrita_mediano" text="I. Actas Siniestradas" />
+                                <Label layoutX="30.0" prefHeight="21.0" prefWidth="139.0" styleClass="lbl_negrita" text="Actas Procesadas " />
+                                <Label layoutX="40.0" layoutY="22.0" prefHeight="26.0" prefWidth="288.0" styleClass="lbl_reduce_negrita_mediano" text="A. Actas Contabilizadas Normales" />
+                                <Label layoutX="30.0" layoutY="58.0" prefHeight="21.0" prefWidth="168.0" styleClass="lbl_negrita" text="Actas Enviadas al JEE" />
+                                <Label layoutX="40.0" layoutY="75.0" prefHeight="26.0" prefWidth="225.0" styleClass="lbl_reduce_negrita_mediano" text="B. Con Votos Impugnados" />
+                                <Label layoutX="40.0" layoutY="93.0" prefHeight="21.0" prefWidth="162.0" styleClass="lbl_reduce_negrita_mediano" text="C. Con Error Material" />
+                                <Label layoutX="40.0" layoutY="106.0" prefHeight="26.0" prefWidth="191.0" styleClass="lbl_reduce_negrita_mediano" text="D. Con Ilegibilidad" />
+                                <Label layoutX="40.0" layoutY="123.0" styleClass="lbl_reduce_negrita_mediano" text="E. Incompleta" />
+                                <Label layoutX="40.0" layoutY="138.0" styleClass="lbl_reduce_negrita_mediano" text="F. Con solicitud de nulidad" />
+                                <Label layoutX="40.0" layoutY="153.0" styleClass="lbl_reduce_negrita_mediano" text="G. Actas sin datos" />
+                                <Label layoutX="40.0" layoutY="168.0" styleClass="lbl_reduce_negrita_mediano" text="H. Actas Extraviadas" />
+                                <Label layoutX="40.0" layoutY="198.0" styleClass="lbl_reduce_negrita_mediano" text="J. Sin Firmas" />
+                                <Label layoutX="40.0" layoutY="213.0" styleClass="lbl_reduce_negrita_mediano" text="K. Con mas de un tipo de Observaciones" />
+                                <Label layoutX="30.0" layoutY="260.0" styleClass="lbl_negrita" text="Anuladas por Resolución" />
+                                <Label layoutX="40.0" layoutY="275.0" styleClass="lbl_reduce_negrita_mediano" text="L. Contabilizadas Anuladas" />
+                                <Label layoutX="40.0" layoutY="305.0" styleClass="lbl_reduce_negrita_mediano" text="M. Actas de Mesas No Instaladas" />
+                                <Label layoutX="30.0" layoutY="340.0" prefHeight="26.0" prefWidth="159.0" styleClass="lbl_negrita" text="Actas Por Procesar " />
+                                <Label fx:id="lblPorcActasProcesadas" layoutX="180.0" prefHeight="21.0" prefWidth="84.0" styleClass="lbl_negrita" text="(0.000 %)" />
+                                <Label fx:id="lblActasProcesadas" alignment="CENTER" layoutX="440.0" layoutY="1.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_negrita" text="0" />
+                                <Label fx:id="lblVotosInpug" alignment="CENTER" layoutX="440.0" layoutY="75.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+                                <Label fx:id="lblErrorMaterial" alignment="CENTER" layoutX="440.0" layoutY="93.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+                                <Label fx:id="lblLegitibilidad" alignment="CENTER" layoutX="440.0" layoutY="106.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+                                <Label fx:id="lblIncompleta" alignment="CENTER" layoutX="440.0" layoutY="123.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+                                <Label fx:id="lblSolicitudNulidad" alignment="CENTER" layoutX="440.0" layoutY="138.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblPorcPorProcesar" layoutX="190.0" layoutY="340.0" prefHeight="21.0" prefWidth="84.0" styleClass="lbl_negrita" text="(0.000 %)" /><Line endX="340.0" layoutX="604.0" layoutY="200.0" startX="-100.0" /><Line endY="270.0" layoutX="500.0" layoutY="100.0" startY="-90.0" />
+<Label layoutX="550.0" layoutY="10.0" prefHeight="18.0" prefWidth="141.0" styleClass="lbl_negrita" text="Mesas a Instalar" />
+<Label layoutX="550.0" layoutY="30.0" prefHeight="26.0" prefWidth="185.0" styleClass="lbl_reduce_negrita_mediano" text="N. Mesas Instaladas" />
+<Label layoutX="550.0" layoutY="50.0" prefHeight="26.0" prefWidth="193.0" styleClass="lbl_reduce_negrita_mediano" text="O. Mesas no Instaladas" />
+<Label layoutX="550.0" layoutY="70.0" prefHeight="26.0" prefWidth="200.0" styleClass="lbl_reduce_negrita_mediano" text="P. Mesas por Informar" />
+<Label layoutX="550.0" layoutY="100.0" prefHeight="26.0" prefWidth="209.0" styleClass="lbl_negrita" text="Informacion Referencial" />
+<Label layoutX="550.0" layoutY="120.0" prefHeight="26.0" prefWidth="178.0" styleClass="lbl_reduce_negrita_mediano" text="Q. Mesas Agrupadas" />
+<Label layoutX="550.0" layoutY="140.0" prefHeight="26.0" prefWidth="197.0" styleClass="lbl_reduce_negrita_mediano" text="R. Grupos de votación" />
+<Label layoutX="630.0" layoutY="245.0" prefHeight="70.0" prefWidth="127.0" styleClass="lbl_reduce_negrita_mediano" text="(% ) de Actas &#10;Contabilizadas" />
+<Label alignment="CENTER" layoutX="688.0" layoutY="234.0" prefHeight="91.0" prefWidth="157.0" styleClass="lbl_negrita" text="&#9;A + L + M&#10;=   &#10;&#9;N + O + P" />
+<Line endX="80.0" layoutX="742.0" layoutY="280.0" />
+<Label fx:id="lblActasContbNorm" alignment="CENTER" layoutX="440.0" layoutY="22.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblActasSinDatos" alignment="CENTER" layoutX="440.0" layoutY="153.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblActasExtraviadas" alignment="CENTER" layoutX="440.0" layoutY="168.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblSinfFirmas" alignment="CENTER" layoutX="440.0" layoutY="198.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblConMasObservacion" alignment="CENTER" layoutX="440.0" layoutY="213.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblContabAnuladas" alignment="CENTER" layoutX="440.0" layoutY="275.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblActasMesasNoInst" alignment="CENTER" layoutX="440.0" layoutY="305.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblActasPorProcesar" alignment="CENTER" layoutX="440.0" layoutY="340.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_negrita" text="0" />
+<Label fx:id="lblMesasAInstalar" alignment="CENTER" layoutX="900.0" layoutY="10.0" prefHeight="18.0" prefWidth="38.0" styleClass="lbl_negrita" text="0" />
+<Label fx:id="lblMesasInstaldas" alignment="CENTER" layoutX="900.0" layoutY="30.0" prefHeight="18.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblMesasNoInstaladas" alignment="CENTER" layoutX="900.0" layoutY="50.0" prefHeight="18.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblMesasPorInformar" alignment="CENTER" layoutX="900.0" layoutY="70.0" prefHeight="18.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblMesasAgrupadas" alignment="CENTER" layoutX="900.0" layoutY="120.0" prefHeight="18.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+<Label fx:id="lblGruposVotacion" alignment="CENTER" layoutX="865.0" layoutY="140.0" prefHeight="26.0" prefWidth="107.0" styleClass="lbl_reduce_negrita_mediano" text="0" /><Label fx:id="lblActasSiniestradas" alignment="CENTER" layoutX="440.0" layoutY="183.0" prefHeight="15.0" prefWidth="38.0" styleClass="lbl_reduce_negrita_mediano" text="0" />
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane><Label fx:id="labelHidden" alignment="CENTER" layoutX="340.0" layoutY="242.0" prefHeight="21.0" prefWidth="410.0" />
+</children></AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

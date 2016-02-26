@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="368.0" prefWidth="617.0" styleClass="reporconsult_avanc_vot_pref_main" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.AvanceVotacionPreferencialController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <AnchorPane fx:id="panelSeleccion" layoutX="25.0" layoutY="92.0" prefHeight="177.0" prefWidth="557.0" styleClass="ap_background-color_white" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+                <Pane layoutX="25.0" layoutY="57.0" prefHeight="35.0" prefWidth="548.0" styleClass="ap_background-color_purple" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+<children><Label alignment="CENTER" layoutY="6.0" prefHeight="24.0" prefWidth="557.0" styleClass="lbl_titulo_agrupador" text="Criterio de Seleccion" />
+</children></Pane>
+                <AnchorPane layoutY="247.0" prefHeight="62.0" prefWidth="595.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <HBox layoutX="399.0" layoutY="-31.0" prefHeight="100.0" prefWidth="184.0" styleClass="hbox_botones">
+                            <children>                    
+                                <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                                <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="reporconsult_resumen_estado_actas_ap_main,ap_background-color_gainsboro" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.ResumenEstadoActasController">
+    <children><AnchorPane layoutX="909.0" layoutY="-36.0" prefHeight="400.0" prefWidth="600.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+<children>
+        <AnchorPane fx:id="paneSelection" layoutX="24.0" layoutY="89.0" prefHeight="123.0" prefWidth="1240.0" styleClass="ap_background-color_white">
+            <children>
+                <TextField fx:id="txtMinutes" alignment="CENTER" layoutX="131.0" layoutY="85.0" onKeyPressed="#handleEnterPressed" prefWidth="72.0" styleClass="txt-field" />
+                <Button fx:id="buttonManual" layoutX="282.0" layoutY="82.0" mnemonicParsing="false" onAction="#buttonManualOnAction" prefHeight="27.0" prefWidth="92.0" styleClass="btn_gold" text="Manual" />
+                <Label layoutX="15.0" layoutY="86.0" styleClass="lbl_color" text="Actualizar Cada:" />
+                <Label layoutX="218.0" layoutY="86.0" styleClass="lbl_color" text="minutos" />
+            </children>
+        </AnchorPane><Pane layoutX="24.0" layoutY="253.0" prefHeight="263.0" prefWidth="1240.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="253.0">
+<children><TableView fx:id="tableViewConsulta" prefHeight="487.0" prefWidth="1241.0">
+  <columns>
+    <TableColumn id="tipoEleccion" fx:id="columnId" prefWidth="43.0" resizable="false" text="Id" />
+    <TableColumn id="nombreCortoEleccion" fx:id="columnTipoEleccion" prefWidth="350.0" resizable="false" text="Tipo Eleccion" /><TableColumn id="aProcesar" fx:id="columnActasProcesar" minWidth="0.0" prefWidth="110.0" resizable="false" text="Actas a &#10; Procesar" /><TableColumn id="pendientes" fx:id="columnActasPendientes" prefWidth="110.0" resizable="false" text="Actas&#10;Pendientes" /><TableColumn id="procesadas" fx:id="columnActasProcesadas" prefWidth="110.0" resizable="false" text="Actas&#10;Procesadas" /><TableColumn id="observadas" fx:id="columnActasEnvioResolver" prefWidth="172.0" resizable="false" text="Actas para envio al &#10;JEE por Resolver" /><TableColumn id="resueltas" fx:id="columnActasEnvioResueltas" prefWidth="172.0" resizable="false" text="Actas para envio al &#10;JEE Resueltas" /><TableColumn id="totalObsResult" fx:id="columnActasTotal" prefWidth="172.0" resizable="false" text="Actas por Resolver y&#10;Resueltas" />
+  </columns>
+</TableView>
+</children></Pane>
+        <TextField fx:id="txtTotalAProcesar" alignment="CENTER" editable="false" layoutX="423.0" layoutY="524.0" prefWidth="100.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+        <TextField fx:id="txtTotalPendientes" alignment="CENTER" editable="false" layoutX="535.0" layoutY="524.0" prefWidth="100.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+        <TextField fx:id="txtTotalProcesadas" alignment="CENTER" editable="false" layoutX="645.0" layoutY="524.0" prefWidth="100.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+        <TextField fx:id="txtTotalEnvioResolver" alignment="CENTER" editable="false" layoutX="755.0" layoutY="524.0" prefWidth="165.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+        <TextField fx:id="txtTotalEnvioResueltas" alignment="CENTER" editable="false" layoutX="925.0" layoutY="524.0" prefWidth="165.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+        <TextField fx:id="txtTotalGeneral" alignment="CENTER" editable="false" layoutX="1095.0" layoutY="524.0" prefWidth="165.0" styleClass="txt-field_sin_border" AnchorPane.bottomAnchor="120.0" />
+        <Pane layoutX="24.0" layoutY="55.0" prefHeight="34.0" prefWidth="1240.0" styleClass="ap_background-color_purple" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+            <children>
+                <Label layoutX="532.0" layoutY="2.0" styleClass="lbl_titulo_agrupador" text="Criterios de Selección" />
+            </children>
+        </Pane>
+        <Pane layoutX="24.0" layoutY="219.0" prefHeight="34.0" prefWidth="1240.0" styleClass="ap_background-color_electricbue" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+            <children>
+                <Label layoutX="525.0" layoutY="5.0" styleClass="lbl_subtitulo_aplicativo_RC" text="Resumen del Estado de Actas" />
+            </children>
+        </Pane>
+        <Label layoutX="321.0" layoutY="525.0" styleClass="lbl_color" text="Consolidado:" AnchorPane.bottomAnchor="120.0" />
+        <AnchorPane layoutY="596.0" prefHeight="63.0" prefWidth="882.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <children>
+                <HBox layoutX="980.0" layoutY="-32.0" prefHeight="100.0" prefWidth="278.0" styleClass="hbox_botones">
+                    <children>
+                        <Button fx:id="btnConsultar" mnemonicParsing="false" onAction="#btnConsultarOnAction" prefHeight="83.0" prefWidth="185.0" styleClass="btn_consultar" text="CONSULTAR" />
+                        <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                        <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+</children></AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportListadoActas" columnCount="12" printOrder="Horizontal" pageWidth="595" pageHeight="842" columnWidth="46" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="58827039-b389-4647-96ce-e4c3b4f48090">
+	<property name="ireport.zoom" value="1.5000000000000007"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Crosstab Data Text" hAlign="Center"/>
+	<subDataset name="dataset1" uuid="5b30809d-a3a6-43fe-827e-0be8a019e054"/>
+	<subDataset name="dataset2" uuid="51ca8f23-e61e-41e1-adc4-ae17b8b53840"/>
+	<subDataset name="dataset3" uuid="e74e2757-7f4c-46a4-bdce-cac8e509d316"/>
+	<subDataset name="dataset4" uuid="a92973c2-3325-4b63-9bdb-f1fda76ca447"/>
+	<subDataset name="Table Dataset 1" uuid="98833b45-f62d-43a5-b06f-8a9416c28d8f"/>
+	<parameter name="titulo" class="java.lang.String"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\kleon\\Documents\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="url_imagen" class="java.io.InputStream"/>
+	<parameter name="tituloPrincipal" class="java.lang.String"/>
+	<parameter name="tituloSecundario" class="java.lang.String"/>
+	<parameter name="estadoActas" class="java.lang.String"/>
+	<parameter name="servidor" class="java.lang.String"/>
+	<parameter name="usuario" class="java.lang.String"/>
+	<parameter name="estacion" class="java.lang.String"/>
+	<parameter name="reporte" class="java.lang.String"/>
+	<parameter name="sinvaloroficial" class="java.lang.String"/>
+	<parameter name="version" class="java.lang.String"/>
+	<field name="codCentroComputo" class="java.lang.String"/>
+	<field name="desCentroComputo" class="java.lang.String"/>
+	<field name="codDepartamento" class="java.lang.String"/>
+	<field name="desDepartamento" class="java.lang.String"/>
+	<field name="numActa" class="java.lang.String"/>
+	<field name="listActas" class="java.util.List"/>
+	<variable name="codCentroComputo_1" class="java.lang.Integer" resetType="Group" resetGroup="codDepartamentoGroup" calculation="Count">
+		<variableExpression><![CDATA[$F{codCentroComputo}]]></variableExpression>
+	</variable>
+	<variable name="totalnumActasCC" class="java.lang.Integer" resetType="Group" resetGroup="codCCGroup" calculation="Count">
+		<variableExpression><![CDATA[$F{numActa}]]></variableExpression>
+	</variable>
+	<variable name="totalnumActasDepart" class="java.lang.Integer" resetType="Group" resetGroup="codDepartamentoGroup" calculation="Count">
+		<variableExpression><![CDATA[$F{numActa}]]></variableExpression>
+	</variable>
+	<variable name="totalGeneral" class="java.lang.Integer" incrementType="Group" incrementGroup="codDepartamentoGroup" calculation="Sum">
+		<variableExpression><![CDATA[$V{totalnumActasDepart}]]></variableExpression>
+	</variable>
+	<group name="codDepartamentoGroup" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{codDepartamento}]]></groupExpression>
+		<groupHeader>
+			<band height="34">
+				<staticText>
+					<reportElement x="33" y="10" width="91" height="15" uuid="b99d3aa0-835a-4c61-897e-2fb49895f8ed"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Departamento :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="139" y="10" width="100" height="15" uuid="0bc55773-858a-4bbb-9679-6f7169a45d95"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{codDepartamento}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="252" y="10" width="300" height="15" uuid="a22afaca-57d2-4f20-bd3c-44c83fea90ca"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{desDepartamento}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="67">
+				<staticText>
+					<reportElement x="189" y="9" width="182" height="15" uuid="6d4d1728-8478-492d-8d95-63ac691e44f6"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Sub Total Actas por Departamento :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="381" y="9" width="100" height="15" uuid="78b89753-72ff-4536-8cc7-f84ec11b46ca"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="false" isStrikeThrough="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{totalnumActasDepart}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="codCCGroup" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{codCentroComputo}]]></groupExpression>
+		<groupHeader>
+			<band height="55">
+				<staticText>
+					<reportElement x="51" y="10" width="73" height="15" uuid="20a35a47-83bf-4007-9118-5c5f50406e8e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[C. Cómputo :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="139" y="10" width="100" height="15" uuid="d8315b8b-8199-43bf-b839-307c4e5b76d9"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{codCentroComputo}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="271" y="10" width="281" height="15" uuid="e7ac0b3f-ab0d-4d55-b269-85409a5226ce"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{desCentroComputo}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="26">
+				<staticText>
+					<reportElement x="167" y="5" width="204" height="15" uuid="3c4ae49f-42d8-46db-97bb-9e12759c09f9"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Sub Total Actas por Centro de Cómputo :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="381" y="5" width="100" height="15" uuid="9d00d90b-2658-420c-b6bc-224b7e80a74e"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Arial" size="9" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{totalnumActasCC}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band height="802" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{sinvaloroficial}!=""]]></printWhenExpression>
+			<textField>
+				<reportElement mode="Transparent" x="15" y="281" width="524" height="240" forecolor="#C0C0C0" backcolor="#9999FF" uuid="20339456-53fe-4773-8473-5815cbb40a68">
+					<property name="ireport.layer" value="2"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="72"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sinvaloroficial}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="123" splitType="Stretch">
+			<textField>
+				<reportElement x="473" y="37" width="24" height="15" uuid="3466e529-c601-4490-b4dd-f0f0b8e5c8cd"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + " de"]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="473" y="3" width="79" height="15" uuid="c0d33e7c-6267-4179-9e5f-aaa2ec41f845"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Blank">
+				<reportElement x="5" y="3" width="80" height="80" uuid="f05a1a6e-0915-4ac7-92b2-4991f928520b"/>
+				<imageExpression><![CDATA[$P{url_imagen}]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="91" y="52" width="341" height="28" forecolor="#000000" uuid="82d68036-bf64-402a-813f-ff7313945a38"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tituloSecundario}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss">
+				<reportElement x="473" y="20" width="79" height="15" uuid="0df3e37f-2908-466a-bed1-881dd001c75b"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="91" y="3" width="341" height="28" forecolor="#7F7F7F" uuid="2ba33f2e-3c40-4bd7-87c0-6a8b1f0e9941"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tituloPrincipal}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="497" y="37" width="55" height="15" uuid="a92d4ce1-ad89-41eb-9b83-a4a6ffeb36fd"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="97" width="100" height="15" uuid="47456ada-55f9-4a56-ac55-cff02c076f1f"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{estadoActas}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="33" y="97" width="91" height="15" uuid="85e918e7-595c-4e1c-8937-0dc6492935e0"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estado de Actas  :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="437" y="37" width="35" height="15" uuid="b0a3806f-32bb-45b4-8a1a-61ac34c2d38f"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Página:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="437" y="20" width="35" height="15" uuid="d3bed6f2-40ed-4339-9262-adfc430488e0"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="437" y="3" width="35" height="15" uuid="8a33c380-1bf0-406b-8475-9bb495582748"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha :]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Prevent">
+			<textField>
+				<reportElement x="3" y="3" width="40" height="15" uuid="03083172-f17a-4022-ab36-3ff6efcffce6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{numActa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="432" y="12" width="41" height="15" uuid="b77afa64-aff3-4bf3-81a5-e5b6aec725c1"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="346" y="12" width="75" height="15" uuid="861e2ecc-d21c-458e-81a1-a17a2c2670ae"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{estacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="481" y="12" width="71" height="15" uuid="4ea8ac1b-cec9-4e79-8799-40c461350682"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reporte}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="5" y="12" width="41" height="15" uuid="6417a760-c6dc-4942-a5bd-ec6b34d9a3ef"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Servidor :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="218" y="13" width="75" height="15" uuid="f66ff71a-a1f4-4235-8363-7512e1970ad0"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{usuario}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="177" y="13" width="41" height="15" uuid="da9fc11d-0cc6-460a-a3fa-aa3acdf2259c"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Usuario :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="46" y="12" width="121" height="15" uuid="75aa86f0-27de-45c9-ba75-c8a75470edb1"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{servidor}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="305" y="12" width="41" height="15" uuid="480a86c6-8000-489b-bfd5-6027bfb4a3fd"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estación :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="481" y="28" width="71" height="15" uuid="97fc204a-0a48-4aa7-b88d-7c65054c2e3b"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{version}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="432" y="28" width="41" height="15" uuid="c681ff42-f799-4a72-93c9-1d35e1024c90"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Versión  :]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="293" y="11" width="78" height="15" uuid="be5825cb-7ada-4406-a978-7317fad54d91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total General :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="381" y="11" width="100" height="15" uuid="84e28296-b710-42a1-af36-131930bdc392"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{totalGeneral}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

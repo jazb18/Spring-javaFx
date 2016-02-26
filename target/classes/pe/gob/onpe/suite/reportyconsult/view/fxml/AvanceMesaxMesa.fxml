@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" styleClass="reporconsult_mesa_x_Mesa" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.AvanceMesaxMesaController">
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+<children><AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+<children><Pane layoutX="20.0" layoutY="51.0" prefHeight="35.0" prefWidth="832.0" styleClass="ap_background-color_purple">
+<children>
+<Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="4.0" prefHeight="21.0" prefWidth="832.0" styleClass="lbl_titulo_agrupador" text="Criterio de Selección" />
+</children>
+</Pane><Pane fx:id="paneContainer" layoutX="20.0" layoutY="85.0" prefHeight="173.0" prefWidth="832.0" styleClass="ap_background-color_white" /><AnchorPane prefHeight="60.0" prefWidth="200.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+<children><HBox layoutX="678.0" layoutY="-31.0" prefHeight="65.0" prefWidth="182.0" styleClass="hbox_botones">
+<children>
+<Button mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+<Button mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="77.0" styleClass="btn_salir" text="SALIR" />
+</children>
+</HBox>
+</children></AnchorPane>
+</children></AnchorPane>
+</children>
+</AnchorPane>

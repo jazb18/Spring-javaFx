@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="143.0" prefWidth="531.0" styleClass="reporconsult_resumen_historico_acta_ap_main,ap_background-color_gainsboro" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.ResumenHistoricoActaResumidoController">
+    <children>
+        <AnchorPane layoutX="73.0" layoutY="22.0" prefHeight="414.0" prefWidth="585.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+<children><AnchorPane layoutY="328.0" prefHeight="62.0" prefWidth="585.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+<children>
+<HBox layoutX="476.0" layoutY="-31.0" prefHeight="100.0" prefWidth="184.0" styleClass="hbox_botones">
+<children>
+<Button mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+<Button mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+</children>
+</HBox>
+</children>
+</AnchorPane><Pane layoutX="21.0" layoutY="54.0" prefHeight="35.0" prefWidth="640.0" styleClass="ap_background-color_purple">
+<children>
+<Label layoutX="218.0" layoutY="4.0" styleClass="lbl_titulo" text="Criterio de Seleción" />
+</children>
+</Pane><AnchorPane fx:id="panelSeleccion" layoutX="21.0" layoutY="89.0" prefHeight="189.0" prefWidth="640.0" styleClass="ap_background-color_white">
+<children><ImageView fitHeight="150.0" fitWidth="131.0" layoutX="31.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+<image>
+<Image url="@../image/icono_historico.png" />
+</image></ImageView><Pane fx:id="panelSeleccion" layoutX="171.0" layoutY="53.0" prefHeight="92.0" prefWidth="346.0" />
+</children></AnchorPane>
+</children></AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

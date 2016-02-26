@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="reporconsult_resumen_result_ap_main" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.ResumenResultadosController">
+   
+    <children>
+        <AnchorPane layoutX="14.0" layoutY="31.0" prefHeight="200.0" prefWidth="200.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <AnchorPane layoutX="31.0" layoutY="394.0" prefHeight="58.0" prefWidth="871.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <HBox layoutX="552.0" layoutY="-35.0" prefHeight="100.0" prefWidth="286.0" styleClass="hbox_botones" AnchorPane.rightAnchor="20.0">
+                            <children>
+                                <Button fx:id="btnConsultar" mnemonicParsing="false" onAction="#btnConsultarOnAction" prefHeight="83.0" prefWidth="101.0" styleClass="btn_consultar" text="CONSULTAR" />
+                                <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                                <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane><GridPane layoutX="268.0" layoutY="152.0" prefHeight="48.0" prefWidth="583.0">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+<children><Pane prefHeight="44.0" prefWidth="308.0" styleClass="ap_background-color_purple">
+<children><Label layoutX="26.0" layoutY="7.0" styleClass="lbl_color_blue" text="PRESIDENTRE Y" textAlignment="CENTER" /><Label layoutX="17.0" layoutY="23.0" styleClass="lbl_color_blue" text="VICEPRESIDENTES" textAlignment="CENTER" />
+</children></Pane><Pane prefHeight="200.0" prefWidth="200.0" styleClass="ap_background-color_purple" GridPane.columnIndex="1">
+<children><Label layoutX="38.5048828125" layoutY="14.0" styleClass="lbl_color_blue" text="CONGRESALES" />
+</children></Pane><Pane prefHeight="200.0" prefWidth="200.0" styleClass="ap_background-color_purple" GridPane.columnIndex="2">
+<children><Label layoutX="38.5048828125" layoutY="7.0" styleClass="lbl_color_blue" text="PARLAMENTO" /><Label layoutX="58.5048828125" layoutY="23.0" styleClass="lbl_color_blue" text="ANDINO" />
+</children></Pane>
+</children>
+</GridPane>
+                <Pane fx:id="paneSeleccion" layoutX="20.0" layoutY="51.0" prefHeight="90.0" prefWidth="831.0" styleClass="ap_background-color_white" AnchorPane.bottomAnchor="699.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="51.0" />
+                <Pane layoutX="20.0" layoutY="207.0" prefHeight="530.0" prefWidth="831.0" styleClass="ap_background-color_white" AnchorPane.bottomAnchor="103.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="207.0">
+                    <children>
+                        <Pane layoutX="249.0" layoutY="10.0" prefHeight="29.0" prefWidth="563.0" styleClass="ap_background-color_electricbue">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="4.0" prefHeight="21.0" prefWidth="563.0" styleClass="lbl_color_white" text="AVANCE DE ESCRUTINIO" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="249.0" layoutY="214.0" prefHeight="29.0" prefWidth="563.0" styleClass="ap_background-color_electricbue">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="3.0" prefHeight="21.0" prefWidth="563.0" styleClass="lbl_color_white" text="PARTICIPACIÓN CIUDADANA" />
+                            </children>
+                        </Pane>
+                        <Pane layoutX="249.0" layoutY="419.0" prefHeight="29.0" prefWidth="563.0" styleClass="ap_background-color_electricbue">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="4.0" prefHeight="21.0" prefWidth="563.0" styleClass="lbl_color_white" text="VOTOS BLANCOS Y NULOS" />
+                            </children>
+                        </Pane>
+                        <TextField fx:id="txtPresidencial" disable="true" layoutX="249.0" layoutY="44.0" prefWidth="170.0" />
+                        <TextField fx:id="txtPresidencial2" disable="true" layoutX="249.0" layoutY="77.0" prefWidth="170.0" />
+                        <TextField fx:id="txtPresidencial3" disable="true" layoutX="249.0" layoutY="110.0" prefWidth="170.0" />
+                        <TextField fx:id="txtPresidencial4" disable="true" layoutX="249.0" layoutY="143.0" prefWidth="170.0" />
+                        <TextField fx:id="txtPresidencial5" disable="true" layoutX="249.0" layoutY="177.0" prefWidth="170.0" />
+                        <TextField fx:id="txtPresidencial11" disable="true" layoutX="249.0" layoutY="453.0" prefWidth="170.0" />
+                        <TextField fx:id="txtPresidencial12" disable="true" layoutX="249.0" layoutY="486.0" prefWidth="170.0" />
+                        <TextField fx:id="txtPresidencial6" disable="true" layoutX="249.0" layoutY="249.0" prefWidth="170.0" />
+                        <TextField fx:id="txtPresidencial7" disable="true" layoutX="249.0" layoutY="281.0" prefWidth="170.0" />
+                        <TextField fx:id="txtPresidencial8" disable="true" layoutX="249.0" layoutY="314.0" prefWidth="170.0" />
+                        <TextField fx:id="txtPresidencial9" disable="true" layoutX="249.0" layoutY="348.0" prefWidth="170.0" />
+                        <TextField fx:id="txtPresidencial10" disable="true" layoutX="249.0" layoutY="381.0" prefWidth="170.0" />
+                        <Label layoutX="57.0" layoutY="49.0" prefHeight="21.0" prefWidth="181.0" styleClass="lbl_Gris_RRAE" text="Total de Mesas Asignadas:" />
+                        <Label layoutX="36.0" layoutY="83.0" prefHeight="21.0" prefWidth="194.0" styleClass="lbl_Gris_RRAE" text="Total de Actas Contabilizadas:" />
+                        <Label layoutX="17.0" layoutY="116.0" prefHeight="21.0" prefWidth="216.0" styleClass="lbl_Gris_RRAE" text="Total de Actas para envío al JEE:" />
+                        <Label layoutX="101.0" layoutY="149.0" prefHeight="21.0" prefWidth="131.0" styleClass="lbl_Gris_RRAE" text="(%) de procesadas: " />
+                        <Label layoutX="72.0" layoutY="182.0" prefHeight="21.0" prefWidth="161.0" styleClass="lbl_Gris_RRAE" text="(%) Actas por Procesar:" />
+                        <Label layoutX="121.0" layoutY="458.0" prefHeight="21.0" prefWidth="110.0" styleClass="lbl_Gris_RRAE" text="Votos en Blanco:" />
+                        <Label layoutX="150.0048828125" layoutY="491.0" styleClass="lbl_Gris_RRAE" text="votos Nulos:" />
+                        <Label layoutX="113.0" layoutY="253.0" prefHeight="21.0" prefWidth="118.0" styleClass="lbl_Gris_RRAE" text="Electores Habiles:" />
+                        <Label layoutX="69.0048828125" layoutY="286.0" styleClass="lbl_Gris_RRAE" text="Ciudadanos que Votaron:" />
+                        <Label layoutX="148.6165771484375" layoutY="320.0" styleClass="lbl_Gris_RRAE" text="Ausentismo:" />
+                        <Label layoutX="96.0" layoutY="352.0" prefHeight="21.0" prefWidth="141.0" styleClass="lbl_Gris_RRAE" text="(%) de Participación:" />
+                        <Label layoutX="105.0" layoutY="386.0" prefHeight="21.0" prefWidth="131.0" styleClass="lbl_Gris_RRAE" text="(%) de Ausentismo:" />
+<TextField fx:id="txtCongresal" disable="true" layoutX="449.0" layoutY="44.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento" disable="true" layoutX="641.0" layoutY="44.0" prefWidth="170.0" />
+<TextField fx:id="txtCongresal2" disable="true" layoutX="449.0" layoutY="77.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento2" disable="true" layoutX="641.0" layoutY="77.0" prefWidth="170.0" />
+<TextField fx:id="txtCongresal3" disable="true" layoutX="449.0" layoutY="110.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento3" disable="true" layoutX="641.0" layoutY="110.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento4" disable="true" layoutX="641.0" layoutY="143.0" prefWidth="170.0" />
+<TextField fx:id="txtCongresal4" disable="true" layoutX="449.0" layoutY="143.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento5" disable="true" layoutX="641.0" layoutY="177.0" prefWidth="170.0" />
+<TextField fx:id="txtCongresal5" disable="true" layoutX="449.0" layoutY="177.0" prefWidth="170.0" />
+<TextField fx:id="txtCongresal6" disable="true" layoutX="449.0" layoutY="249.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento6" disable="true" layoutX="641.0" layoutY="249.0" prefWidth="170.0" />
+<TextField fx:id="txtCongresal7" disable="true" layoutX="449.0" layoutY="281.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento7" disable="true" layoutX="641.0" layoutY="281.0" prefWidth="170.0" />
+<TextField fx:id="txtCongresal8" disable="true" layoutX="449.0" layoutY="314.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento8" disable="true" layoutX="641.0" layoutY="314.0" prefWidth="170.0" />
+<TextField fx:id="txtCongresal9" disable="true" layoutX="449.0" layoutY="348.0" prefWidth="170.0" />
+<TextField fx:id="txtCongresal10" disable="true" layoutX="449.0" layoutY="381.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento9" disable="true" layoutX="641.0" layoutY="348.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento10" disable="true" layoutX="641.0" layoutY="381.0" prefWidth="170.0" />
+<TextField fx:id="txtCongresal11" disable="true" layoutX="449.0" layoutY="453.0" prefWidth="170.0" />
+<TextField fx:id="txtCongresal12" disable="true" layoutX="449.0" layoutY="486.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento11" disable="true" layoutX="641.0" layoutY="453.0" prefWidth="170.0" />
+<TextField fx:id="txtParlamento12" disable="true" layoutX="641.0" layoutY="486.0" prefWidth="170.0" /><Pane layoutY="-55.0" prefHeight="48.0" prefWidth="254.0" styleClass="ap_background-color_purple" />
+                    </children>
+                </Pane><Label fx:id="lblValidator" layoutX="37.0" layoutY="752.0" prefHeight="21.0" prefWidth="519.0" />
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

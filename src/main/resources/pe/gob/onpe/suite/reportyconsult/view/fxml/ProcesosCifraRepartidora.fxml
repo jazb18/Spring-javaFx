@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" styleClass="reporconsult_cifra_repartidora,ap_background-color_gainsboro" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.ProcesosCifraRepartidoraController">
+    <children>
+        <AnchorPane layoutX="5.0" layoutY="5.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <Pane layoutX="24.0" layoutY="252.0" prefHeight="156.0" prefWidth="960.0" style="-fx-background-color: #FFFFFF;" styleClass="ap_background-color_white">
+                    <children>
+                        <Label layoutX="28.0" layoutY="20.0" text="Cifra Repartidora:" />
+                        <Label layoutX="28.0" layoutY="61.0" text="Hora Proceso:" />
+                        <TextField fx:id="txtCifraRepartidora" disable="true" layoutX="147.0" layoutY="16.0" prefWidth="96.0" styleClass="ap_background-color_naranja" />
+                        <TextField fx:id="txtHorasProceso" disable="true" layoutX="147.0" layoutY="57.0" prefWidth="96.0" styleClass="ap_background-color_naranja" />
+                        <Label layoutX="256.0" layoutY="20.0" text="Total de Escaños:" />
+                        <Label layoutX="256.0" layoutY="61.0" text="Estado:" />
+                        <TextField fx:id="txtTotalEscaños" disable="true" layoutX="379.0" layoutY="16.0" prefWidth="96.0" styleClass="ap_background-color_naranja" />
+                        <TextField fx:id="txtEstado" alignment="CENTER" disable="true" layoutX="379.0" layoutY="57.0" prefWidth="273.0" styleClass="ap_background-color_naranja" />
+                        <Label layoutX="494.0" layoutY="20.0" prefHeight="21.0" prefWidth="61.0" text="Avance:" />
+                        <TextField fx:id="txtAvance" disable="true" layoutX="555.0" layoutY="16.0" prefWidth="96.0" styleClass="ap_background-color_naranja" />
+                        <Label layoutX="659.0" layoutY="20.0" text="%%" />
+                        <Button fx:id="btnConsolida" layoutX="678.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnConsolidarOnAction" styleClass="btn_consolidado" text="Consolida..." />
+                        <Button fx:id="btnProcesaCR" layoutX="767.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnProcesarCROnAction" styleClass="btn_procesar_CR" text="Procesa CR" />
+                        <Button fx:id="btnResolucion" layoutX="855.0" layoutY="14.0" mnemonicParsing="false" onAction="#btnResolucionOnAction" styleClass="btn_resolucion" text="Resolución..." />
+                        <CheckBox fx:id="chkForzarCalculo" layoutX="837.0" layoutY="99.0" mnemonicParsing="false" text="Forzar Cálculo" />
+                    </children>
+                </Pane>
+                <AnchorPane layoutX="3.0" layoutY="844.0" prefHeight="64.0" prefWidth="1006.0" styleClass="ap_bottom" />
+                <Pane layoutX="23.0" layoutY="87.0" prefHeight="35.0" prefWidth="960.0" styleClass="ap_background-color_purple">
+                    <children>
+                        <Label alignment="CENTER" layoutX="398.0" layoutY="1.0" prefHeight="21.0" prefWidth="165.0" styleClass="lbl_titulo_agrupador" text="Definición" textAlignment="CENTER" />
+                    </children>
+                </Pane>
+                <Pane fx:id="paneSeleccion" layoutX="23.0" layoutY="122.0" prefHeight="111.0" prefWidth="688.0" styleClass="ap_background-color_white" />
+                <TabPane layoutX="24.0" layoutY="367.0" prefHeight="425.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab fx:id="tabCR" text="Cifra Repartidora">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="953.0">
+                                    <children>
+                                        <TextField alignment="CENTER_RIGHT" disable="true" layoutX="14.0" layoutY="219.0" prefWidth="398.0" styleClass="ap_background-color_naranja" text="Total de VOTOS VÁLIDOS:" />
+                                        <TextField fx:id="txtResumen1CR" disable="true" layoutX="430.0" layoutY="219.0" prefWidth="112.0" styleClass="ap_background-color_naranja" />
+                                        <TextField fx:id="txtResumen2CR" disable="true" layoutX="430.0" layoutY="260.0" prefWidth="112.0" styleClass="ap_background-color_naranja" />
+                                        <Pane layoutX="560.0" layoutY="219.0" prefHeight="128.0" prefWidth="384.0" style="-fx-background-color: #DEDEDE;">
+                                            <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Observaciones" underline="true" />
+                                                <Label layoutX="14.0048828125" layoutY="31.5" text="B" />
+                                                <Label layoutX="61.0" layoutY="32.0" text="Bonificado" />
+                                                <Label layoutX="14.0" layoutY="53.0" text="E" />
+                                                <Label layoutX="61.0" layoutY="53.0" text="Empate" />
+                                                <Label layoutX="14.0" layoutY="74.0" text="G" />
+                                                <Label layoutX="61.0" layoutY="74.0" text="Ganador por Sorteo" />
+                                                <Label layoutX="14.0" layoutY="96.0" text="X" />
+                                                <Label layoutX="61.0" layoutY="96.0" text="Perdió por Sorteo" />
+                                            </children>
+                                        </Pane>
+                                        <TableView fx:id="tableViewConsultCR" layoutX="14.0" layoutY="8.0" prefHeight="200.0" prefWidth="928.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabCRCMU" text="Cifra Repartidora 50% +1">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Pane layoutX="513.0" layoutY="219.0" prefHeight="128.0" prefWidth="367.0" style="-fx-background-color: #DEDEDE;">
+                                            <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Observaciones" underline="true" />
+                                                <Label layoutX="14.0048828125" layoutY="31.5" text="B" />
+                                                <Label layoutX="61.0" layoutY="32.0" text="Bonificado" />
+                                                <Label layoutX="14.0" layoutY="53.0" text="E" />
+                                                <Label layoutX="61.0" layoutY="53.0" text="Empate" />
+                                                <Label layoutX="14.0" layoutY="74.0" text="G" />
+                                                <Label layoutX="61.0" layoutY="74.0" text="Ganador por Empate" />
+                                                <Label layoutX="14.0" layoutY="96.0" text="X" />
+                                                <Label layoutX="61.0" layoutY="96.0" text="Perdió por Sorteo" />
+                                            </children>
+                                        </Pane>
+                                        <TextField fx:id="txtResumen2CRCMU" disable="true" layoutX="394.0" layoutY="260.0" prefWidth="112.0" styleClass="ap_background-color_naranja" />
+                                        <TextField fx:id="txtResumen1CRCMU" disable="true" layoutX="394.0" layoutY="219.0" prefWidth="112.0" styleClass="ap_background-color_naranja" />
+                                        <TextField alignment="CENTER_RIGHT" disable="true" layoutX="14.0" layoutY="219.0" prefWidth="369.0" styleClass="ap_background-color_naranja" text="Total de VOTOS VÁLIDOS:" />                                     
+                                        <TableView fx:id="tableViewConsultCRCMU" layoutX="14.0" layoutY="8.0" prefHeight="200.0" prefWidth="928.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabCRResolucion" text="Resolución">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Pane layoutX="513.0" layoutY="219.0" prefHeight="128.0" prefWidth="367.0" style="-fx-background-color: #DEDEDE;">
+                                            <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Observaciones" underline="true" />
+                                                <Label layoutX="14.0048828125" layoutY="31.5" text="B" />
+                                                <Label layoutX="61.0" layoutY="32.0" text="Bonificado" />
+                                                <Label layoutX="14.0" layoutY="53.0" text="E" />
+                                                <Label layoutX="61.0" layoutY="53.0" text="Empate" />
+                                                <Label layoutX="14.0" layoutY="74.0" text="G" />
+                                                <Label layoutX="61.0" layoutY="74.0" text="Ganador por Empate" />
+                                                <Label layoutX="14.0" layoutY="96.0" text="X" />
+                                                <Label layoutX="61.0" layoutY="96.0" text="Perdió por Sorteo" />
+                                            </children>
+                                        </Pane>
+                                        <TextField fx:id="txtResumen2CRResolucion" disable="true" layoutX="394.0" layoutY="260.0" prefWidth="112.0" styleClass="ap_background-color_naranja" />
+                                        <TextField fx:id="txtResumen1CRResolucion" disable="true" layoutX="394.0" layoutY="219.0" prefWidth="112.0" styleClass="ap_background-color_naranja" />
+                                        <TextField alignment="CENTER_RIGHT" disable="true" layoutX="14.0" layoutY="219.0" prefWidth="369.0" styleClass="ap_background-color_naranja" text="Total de VOTOS VÁLIDOS:" />
+                                       <TableView fx:id="tableViewConsultCRResolucion" layoutX="14.0" layoutY="8.0" prefHeight="200.0" prefWidth="928.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab fx:id="tabCRResultado" text="Resultado Final">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <Pane layoutX="513.0" layoutY="219.0" prefHeight="128.0" prefWidth="367.0" style="-fx-background-color: #DEDEDE;">
+                                            <children>
+                                                <Label layoutX="14.0" layoutY="4.0" text="Observaciones" underline="true" />
+                                                <Label layoutX="14.0048828125" layoutY="31.5" text="B" />
+                                                <Label layoutX="61.0" layoutY="32.0" text="Bonificado" />
+                                                <Label layoutX="14.0" layoutY="53.0" text="E" />
+                                                <Label layoutX="61.0" layoutY="53.0" text="Empate" />
+                                                <Label layoutX="14.0" layoutY="74.0" text="G" />
+                                                <Label layoutX="61.0" layoutY="74.0" text="Ganador por Empate" />
+                                                <Label layoutX="14.0" layoutY="96.0" text="X" />
+                                                <Label layoutX="61.0" layoutY="96.0" text="Perdió por Sorteo" />
+                                            </children>
+                                        </Pane>
+                                        <TextField fx:id="txtResumen2CRResultado" disable="true" layoutX="394.0" layoutY="260.0" prefWidth="112.0" styleClass="ap_background-color_naranja" />
+                                        <TextField fx:id="txtResumen1CRResultado" disable="true" layoutX="394.0" layoutY="219.0" prefWidth="112.0" styleClass="ap_background-color_naranja" />
+                                        <TextField alignment="CENTER_RIGHT" disable="true" layoutX="14.0" layoutY="219.0" prefWidth="369.0" styleClass="ap_background-color_naranja" text="Total de VOTOS VÁLIDOS:" />
+                                        <TableView fx:id="tableViewConsultCRResultado" layoutX="14.0" layoutY="8.0" prefHeight="200.0" prefWidth="928.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+                <HBox layoutX="691.0" layoutY="811.0" prefHeight="100.0" prefWidth="279.0" styleClass="hbox_botones">
+                    <children>
+                        <Button fx:id="btnConsultar" mnemonicParsing="false" onAction="#btnConsultarOnAction" prefHeight="83.0" prefWidth="101.0" styleClass="btn_consultar" text="CONSULTAR" />
+                        <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                        <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+                    </children>
+                </HBox>
+                <Label fx:id="lblTituloCifraRepartidora" alignment="CENTER" layoutX="279.0" layoutY="53.0" prefHeight="21.0" prefWidth="449.0" text="CONSULTA DE CIFRA REPARTIDORA " />
+                <Pane layoutX="710.0" layoutY="122.0" prefHeight="111.0" prefWidth="273.0" styleClass="ap_background-color_white">
+                    <children>
+                        <RadioButton fx:id="rbInicial" layoutX="42.0" layoutY="25.0" mnemonicParsing="false" text="CR Inicial">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="rgInicialFinal" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="rbFinal" layoutX="42.0" layoutY="56.0" mnemonicParsing="false" text="CR Final" toggleGroup="$rgInicialFinal" />
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+       
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+    
+</AnchorPane>

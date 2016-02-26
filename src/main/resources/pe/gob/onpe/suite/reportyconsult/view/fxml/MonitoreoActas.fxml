@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="496.0" prefWidth="900.0" styleClass="admseg_monac_ap_main,ap_background-color_gainsboro" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.MonitoreoActasController">
+    <children>
+        <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <Pane id="1" styleClass="ap_background-color_white" AnchorPane.bottomAnchor="817.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1579.0" AnchorPane.topAnchor="45.0">
+                    <children>
+                        <Label layoutX="73.0" layoutY="9.0" prefHeight="25.0" prefWidth="133.0" styleClass="lbl_standar" text="Numero de Mesa:" />
+                        <TextField fx:id="NroMesa" alignment="CENTER" layoutX="69.0" layoutY="32.0" onKeyPressed="#txtMesa_OnKeyPressed" prefHeight="25.0" prefWidth="133.0" />
+                        <Button layoutX="11.0" layoutY="56.0" mnemonicParsing="false" onAction="#btnConfTiempo" styleClass="btn_conf_cron,ap_button_mesa" />
+                        <Button fx:id="btnRefresh" layoutX="61.0" layoutY="56.0" mnemonicParsing="false" onAction="#btnRefrescar" styleClass="btn_refrescar_rep_consult,ap_button_mesa" /><TextField fx:id="txtminutes" layoutX="202.0" layoutY="66.0" prefWidth="66.0" /><Label fx:id="lblTimeminuts" layoutX="126.0" layoutY="72.0" prefHeight="21.0" prefWidth="66.0" styleClass="lbl_reduce_negrita" text="Tiempo (Min)" />
+                    </children>
+                </Pane><FlowPane layoutX="3.0" prefHeight="747.0" prefWidth="298.0" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1579.0" AnchorPane.topAnchor="160.0">
+<children>
+                <TreeView fx:id="treeview" layoutX="3.0" prefHeight="715.0" prefWidth="298.0" styleClass="ap_background-color_white" AnchorPane.bottomAnchor="84.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="1280.0" AnchorPane.topAnchor="160.0" />
+</children></FlowPane>
+                <TabPane layoutY="240.0" styleClass="ap_borderbody" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="84.0" AnchorPane.leftAnchor="317.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="675.0">
+                    <tabs>
+                        <Tab text="Detalle de Acta">
+                            <content>
+                                <AnchorPane>
+                                    <children>
+                                        <TextField fx:id="txtLote" layoutX="150.0" layoutY="29.0" prefHeight="21.0" prefWidth="232.0" styleClass="txt_field" />
+                                        <TextField fx:id="txtnroActa" layoutX="150.0" layoutY="53.0" prefHeight="21.0" prefWidth="232.0" styleClass="txt_field" />
+                                        <TextField fx:id="txtEstadoMesa" layoutX="150.0" layoutY="77.0" prefWidth="232.0" styleClass="txt_field" />
+                                        <TextField fx:id="txtUsuaModif" layoutX="150.0" layoutY="103.0" prefWidth="232.0" styleClass="txt_field" />
+                                        <TextField fx:id="txtFechaModif" layoutX="150.0" layoutY="129.0" prefWidth="232.0" styleClass="txt_field" />
+                                        <Label layoutX="113.0048828125" layoutY="28.5" styleClass="lbl_reduce" text="Lote:" />
+                                        <Label layoutX="49.0" layoutY="53.0" styleClass="lbl_reduce" text="Numero de Acta:" />
+                                        <Label layoutX="66.0" layoutY="78.0" styleClass="lbl_reduce" text="Estado Mesa:" />
+                                        <Label layoutX="62.0" layoutY="103.0" styleClass="lbl_reduce" text="Usuario Modif:" />
+                                        <Label layoutX="33.0" layoutY="130.0" styleClass="lbl_reduce" text="Fecha Modificación:" />
+                                        <Pane layoutX="454.0" layoutY="11.0" prefHeight="20.0" prefWidth="374.0" styleClass="ap_background-color_purple">
+                                            <children>
+                                                <Label alignment="CENTER" prefHeight="21.0" prefWidth="375.0" styleClass="lbl_sub_titulo" text="Estado de ACTA" />
+                                            </children>
+                                        </Pane>
+                                        <Pane layoutX="906.0" layoutY="11.0" prefHeight="20.0" prefWidth="374.0" styleClass="ap_background-color_purple">
+                                            <children>
+                                                <Label alignment="CENTER" prefHeight="20.0" prefWidth="373.0" styleClass="lbl_sub_titulo" text="Estado de PROCESO" />
+                                            </children>
+                                        </Pane>
+                                        <Pane layoutX="454.0" layoutY="31.0" prefHeight="120.0" prefWidth="374.0" styleClass="admseg_p_parametros_acceso">
+                                            <children>
+                                                <TextField fx:id="txtPresidenteActa" layoutX="130.0" layoutY="22.0" prefHeight="21.0" prefWidth="232.0" styleClass="txt_field" />
+                                                <Label layoutX="18.5" layoutY="22.0" styleClass="lbl_reduce" text="Presidente Vicep:" /><Label layoutX="18.5" layoutY="50.0" styleClass="lbl_reduce" text="Congresistas:" /><TextField fx:id="txtCongresistaActa" layoutX="130.0" layoutY="50.0" prefHeight="21.0" prefWidth="232.0" styleClass="txt_field" /><TextField fx:id="txtParlamentoActa" layoutX="130.0" layoutY="81.0" prefHeight="21.0" prefWidth="232.0" styleClass="txt_field" /><Label layoutX="18.5" layoutY="81.0" styleClass="lbl_reduce" text="Parlamento Andino:" />
+                                            </children>
+                                        </Pane>
+                                        <Pane layoutX="906.0" layoutY="31.0" prefHeight="120.0" prefWidth="374.0" styleClass="admseg_p_parametros_acceso">
+                                            <children>
+                                                <TextField fx:id="txtPresidenteProc" layoutX="130.0" layoutY="22.0" prefHeight="21.0" prefWidth="232.0" styleClass="txt_field" />
+                                                <Label layoutX="23.0" layoutY="22.0" styleClass="lbl_reduce" text="Presidente Vicep:" /><Label layoutX="23.0" layoutY="50.0" styleClass="lbl_reduce" text="Congresistas:" /><TextField fx:id="txtCongresistaProc" layoutX="130.0" layoutY="50.0" prefHeight="21.0" prefWidth="232.0" styleClass="txt_field" /><TextField fx:id="txtParlamentoProc" layoutX="130.0" layoutY="78.0" prefHeight="21.0" prefWidth="232.0" styleClass="txt_field" /><Label layoutX="23.0" layoutY="78.0" styleClass="lbl_reduce" text="Parlamento Andino:" />
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Observaciones">
+                            <content>
+                                <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <Label layoutX="20.0" layoutY="10.0" styleClass="lbl_color_gris_monitoreo" text="1. Error Material en el Acta" />
+                                        <Label layoutX="20.0" layoutY="30.0" styleClass="lbl_color_gris_monitoreo" text="2. Votos Impugnados" />
+                                        <Label layoutX="20.0" layoutY="50.0" styleClass="lbl_color_gris_monitoreo" text="3. Solicitud de Nulidad" />
+                                        <Label layoutX="20.0" layoutY="70.0" styleClass="lbl_color_gris_monitoreo" text="4. Acta sin Datos" />
+                                        <Label layoutX="20.0" layoutY="90.0" styleClass="lbl_color_gris_monitoreo" text="5. Ilegibilidad en el Acta" />
+                                        <Label layoutX="20.0" layoutY="110.0" styleClass="lbl_color_gris_monitoreo" text="6. Acta Incompleta" />
+                                        <Label layoutX="20.0" layoutY="130.0" styleClass="lbl_color_gris_monitoreo" text="7. Acta con Observación" />
+                                        <Label layoutX="300.0" layoutY="10.0" styleClass="lbl_color_gris_monitoreo" text="8. Error Material en la Organización Política" />
+                                        <Label layoutX="300.0" layoutY="30.0" styleClass="lbl_color_gris_monitoreo" text="9. Ilegalidad en la Organización Política" />
+                                        <Label layoutX="300.0" layoutY="50.0" styleClass="lbl_color_gris_monitoreo" text="10. Acta en Reprocesamiento" />
+                                        <Label layoutX="300.0" layoutY="70.0" styleClass="lbl_color_gris_monitoreo" text="11. Acta Extraviada" /><Label layoutX="300.0" layoutY="90.0" styleClass="lbl_color_gris_monitoreo" text="12. Acta Sin Firma" /><Label layoutX="300.0" layoutY="110.0" styleClass="lbl_color_gris_monitoreo" text="13. Ilegibilidad Voto Preferencial" /><Label layoutX="300.0" layoutY="130.0" styleClass="lbl_color_gris_monitoreo" text="14. Error Material Voto Preferencial" />
+                                        <Button fx:id="btnDetalle" layoutX="550.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnDetalleOnAction" styleClass="btn_report" text="Detalle" />
+                                        <Button fx:id="btnActa" layoutX="200.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnActaOnAction" styleClass="btn_report" text="Acta" />
+                                        <Label layoutX="775.0" layoutY="20.0" styleClass="lbl_color" text="Presidente Vicep :" />
+                                        <TextField fx:id="txtObservacionPre" layoutX="900.0" layoutY="20.0" prefWidth="300.0" /><Label layoutX="800.0" layoutY="60.0" text="Congresistas :" /><TextField fx:id="txtObservacionCongre" layoutX="900.0" layoutY="60.0" prefWidth="300.0" /><TextField fx:id="txtObservacionPar" layoutX="900.0" layoutY="100.0" prefWidth="300.0" /><Label layoutX="760.0" layoutY="100.0" text="Parlamento Andino :" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Electores y Ciudadanos">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="690.0">
+                                    <children>
+                                        <Pane layoutX="55.0" layoutY="16.0" prefHeight="20.0" prefWidth="360.0" styleClass="ap_background-color_purple">
+                                            <children>
+                                                <Label alignment="CENTER" layoutX="65.0" prefHeight="20.0" prefWidth="225.0" styleClass="lbl_sub_titulo" text="Acta Presidente y Vicepresidente" />
+                                            </children>
+                                        </Pane>
+                                        <Pane layoutX="55.0" layoutY="36.0" prefHeight="110.0" prefWidth="360.0" styleClass="admseg_p_parametros_acceso">
+                                            <children>
+                                                <TextField fx:id="txtSufragioPre" layoutX="160.0" layoutY="8.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" />
+                                                <Label layoutX="13.0" layoutY="32.0" styleClass="lbl_reduce" text="Suma de votos Legibles :" />
+                                                <Label layoutX="100.0" layoutY="10.0" styleClass="lbl_reduce" text="Sufragio:" />
+                                                <TextField fx:id="txtSumVotosPre" layoutX="160.0" layoutY="32.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" />
+                                                <Label layoutX="50.0" layoutY="56.0" styleClass="lbl_reduce" text="Electores Habiles:" />
+                                                <TextField fx:id="txtElecHabilesPre" layoutX="160.0" layoutY="56.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" />
+                                                <TextField fx:id="txtAusentismoPre" layoutX="160.0" layoutY="80.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" />
+                                                <Label layoutX="81.0" layoutY="80.0" styleClass="lbl_reduce" text="Ausentismo:" />
+                                            </children>
+                                        </Pane><Pane layoutX="450.0" layoutY="36.0" prefHeight="110.0" prefWidth="360.0" styleClass="admseg_p_parametros_acceso">
+<children><Label layoutX="81.0" layoutY="80.0" styleClass="lbl_reduce" text="Ausentismo:" /><TextField fx:id="txtAusentismoCongre" layoutX="160.0" layoutY="80.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" /><TextField fx:id="txtElecHabilesCongre" layoutX="160.0" layoutY="56.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" /><Label layoutX="50.0" layoutY="56.0" styleClass="lbl_reduce" text="Electores Habiles:" /><TextField fx:id="txtSumVotosCongre" layoutX="160.0" layoutY="32.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" /><Label layoutX="100.0" layoutY="10.0" styleClass="lbl_reduce" text="Sufragio:" /><Label layoutX="13.0" layoutY="32.0" styleClass="lbl_reduce" text="Suma de votos Legibles :" /><TextField fx:id="txtSufragioCongre" layoutX="160.0" layoutY="8.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" />
+</children></Pane><Pane layoutX="450.0" layoutY="16.0" prefHeight="20.0" prefWidth="360.0" styleClass="ap_background-color_purple">
+<children><Label layoutX="130.0" styleClass="lbl_sub_titulo" text="Acta Congresistas" />
+</children></Pane><Pane layoutX="840.0" layoutY="16.0" prefHeight="20.0" prefWidth="360.0" styleClass="ap_background-color_purple">
+<children><Label layoutX="95.0" styleClass="lbl_sub_titulo" text="Acta Parlamento Andino" />
+</children></Pane><Pane layoutX="840.0" layoutY="36.0" prefHeight="110.0" prefWidth="360.0" styleClass="admseg_p_parametros_acceso">
+<children><TextField fx:id="txtSufragioPar" layoutX="160.0" layoutY="8.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" /><Label layoutX="13.0" layoutY="32.0" styleClass="lbl_reduce" text="Suma de votos Legibles :" /><Label layoutX="100.0" layoutY="10.0" styleClass="lbl_reduce" text="Sufragio:" /><TextField fx:id="txtSumVotosPar" layoutX="160.0" layoutY="32.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" /><Label layoutX="50.0" layoutY="56.0" styleClass="lbl_reduce" text="Electores Habiles:" /><TextField fx:id="txtElecHabilesPar" layoutX="160.0" layoutY="56.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" /><TextField fx:id="txtAusentismoPar" layoutX="160.0" layoutY="80.0" prefHeight="21.0" prefWidth="100.0" styleClass="txt_field" /><Label layoutX="81.0" layoutY="80.0" styleClass="lbl_reduce" text="Ausentismo:" />
+</children></Pane>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+                <AnchorPane layoutY="450.0" prefHeight="64.0" prefWidth="878.0" styleClass="ap_bottom" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <HBox layoutX="700.0" layoutY="-32.0" prefHeight="100.0" styleClass="hbox_botones" />
+                        <!--                        <Button mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />-->
+                        <Button layoutX="1503.0" layoutY="-25.0" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" AnchorPane.bottomAnchor="13.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="-28.0" />
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="320.0" layoutY="41.0" styleClass="ap_background-color_white" AnchorPane.bottomAnchor="615.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="45.0">
+                    <children>
+                        <TableView fx:id="tablaCongresista" layoutX="14.0" layoutY="55.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+                            <columns>
+                                <TableColumn prefWidth="20.0" />
+                            </columns>
+                        </TableView>
+                        <Pane layoutY="1.0" prefHeight="35.0" styleClass="ap_background-color_electricbue" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="489.0" layoutY="4.0" styleClass="lbl_subtitulo_aplicativo_RC" text="Elección Congresista de la Republica" textAlignment="CENTER" />
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="320.0" layoutY="295.0" styleClass="ap_background-color_white" AnchorPane.bottomAnchor="295.0" AnchorPane.leftAnchor="320.0" AnchorPane.rightAnchor="945.0" AnchorPane.topAnchor="359.0">
+                    <children>
+                        <Pane layoutX="84.0" layoutY="68.0" prefHeight="35.0" styleClass="ap_background-color_electricbue" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="4.0" prefHeight="25.0" prefWidth="623.0" styleClass="lbl_subtitulo_aplicativo_RC" text="Elección Presidente y  Vicepresidente de la Republica" textAlignment="CENTER" />
+                            </children>
+                        </Pane>
+                        <TableView fx:id="tablaPresidente" layoutX="100.0" layoutY="3.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+                            <columns>
+                                <TableColumn prefWidth="20.0" />
+                                <TableColumn fx:id="ColumnNroPre" prefWidth="52.0" text="Nro" />
+                                <TableColumn fx:id="ColumnCandidatosPre" prefWidth="439.0" text="Organizacion Politica" /><TableColumn fx:id="ColumnVotosPre" prefWidth="98.0" text="Votos" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane layoutX="947.0" layoutY="289.0" styleClass="ap_background-color_white" AnchorPane.bottomAnchor="295.0" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="359.0">
+                    <children>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="35.0" styleClass="ap_background-color_electricbue" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutY="4.0" prefHeight="25.0" prefWidth="890.0" styleClass="lbl_subtitulo_aplicativo_RC" text="Elección Representantes Peruanos ante el Parlamento Andino" />
+                            </children>
+                        </Pane>
+                        <TableView fx:id="tablaParAndino" layoutX="24.0" layoutY="3.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="35.0">
+                            <columns>
+                                <TableColumn prefWidth="20.0" />
+                                <TableColumn fx:id="ParlamenNro" prefWidth="60.0" text="Nro" />
+                                <TableColumn fx:id="ParlamenCandidatos" prefWidth="439.0" text="Organizacion Politica" /><TableColumn fx:id="ParlamenVotos" prefWidth="93.0" text="Votos" /><TableColumn fx:id="Parlamen1" prefWidth="67.0" text="1" /><TableColumn fx:id="Parlamen2" prefWidth="67.0" text="2" /><TableColumn fx:id="Parlamen3" prefWidth="67.0" text="3" /><TableColumn fx:id="Parlamen4" prefWidth="67.0" text="4" /><TableColumn fx:id="Parlamen5" prefWidth="67.0" text="5" /><TableColumn fx:id="Parlamen6" prefWidth="67.0" text="6" /><TableColumn fx:id="Parlamen7" prefWidth="67.0" text="7" /><TableColumn fx:id="Parlamen8" prefWidth="67.0" text="8" /><TableColumn fx:id="Parlamen9" prefWidth="67.0" text="9" /><TableColumn fx:id="Parlamen10" prefWidth="67.0" text="10" /><TableColumn fx:id="Parlamen11" prefWidth="67.0" text="11" /><TableColumn fx:id="Parlamen12" prefWidth="67.0" text="12" /><TableColumn fx:id="Parlamen13" prefWidth="67.0" text="13" /><TableColumn fx:id="Parlamen14" prefWidth="67.0" text="14" /><TableColumn fx:id="Parlamen15" prefWidth="67.0" text="15" />
+                            </columns>
+                        </TableView>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

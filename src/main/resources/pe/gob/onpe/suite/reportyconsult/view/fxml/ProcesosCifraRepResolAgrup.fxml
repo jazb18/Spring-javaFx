@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="777.0" prefWidth="726.0" styleClass="ap_background-color_gainsboro" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.ProcesosCifraRepResolAgrupController">
+    <children>
+        <AnchorPane layoutX="5.0" layoutY="-4.0" prefHeight="767.0" prefWidth="720.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <AnchorPane layoutY="656.0" prefHeight="61.0" prefWidth="690.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <HBox layoutX="399.0" layoutY="-31.0" prefHeight="100.0" prefWidth="303.0" styleClass="hbox_botones" AnchorPane.rightAnchor="14.0">
+                            <children>                    
+                                <Button fx:id="btnGrabar" mnemonicParsing="false" onAction="#btnGrabarOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_grabar" text="GRABAR" />
+                                <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#btnEliminarOnAction" prefHeight="88.0" prefWidth="63.0" styleClass="btn_eliminar" text="ELIMINAR" />
+                                <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="99.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+                <TabPane layoutX="24.0" layoutY="62.0" prefHeight="592.0" prefWidth="670.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                        <Tab text="Resolución">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="549.0" prefWidth="542.0">
+                                    <children>
+                                        <Pane layoutX="14.0" layoutY="66.0" prefHeight="226.0" prefWidth="639.0" styleClass="yellow_background">
+                                            <children>
+                                                <Label layoutX="27.0" layoutY="14.0" prefHeight="21.0" prefWidth="124.0" text="Nro. Resolución: " />
+                                                <Label layoutX="27.0" layoutY="47.0" text="Tipo de Resolución: " />
+                                                <Label layoutX="27.0" layoutY="77.0" text="Agrup. Favorecida: " />
+                                                <Label layoutX="27.0" layoutY="109.0" text="Estado Agrupación: " />
+                                                <Label layoutX="27.0" layoutY="141.0" prefHeight="21.0" prefWidth="125.0" text="Descripción: " />
+                                                <TextField fx:id="txtNroResolucion" layoutX="157.0" layoutY="10.0" prefWidth="244.0" />
+                                                <TextField fx:id="txtTipoResolucion" disable="true" layoutX="157.0" layoutY="43.0" prefWidth="244.0" />
+                                                <ComboBox fx:id="cboAgrupFavorecida" layoutX="157.0" layoutY="75.0" prefWidth="244.0" />
+                                                <ComboBox fx:id="cboEstados" layoutX="404.0" layoutY="44.0" prefWidth="131.0" />
+                                                <ComboBox fx:id="cboEstadoAgrupacion" layoutX="157.0" layoutY="107.0" prefWidth="140.0" />
+                                                <Label layoutX="311.0" layoutY="109.0" text="Curules Asig. :" />
+                                                <TextField fx:id="txtCurulesAsignados" layoutX="404.0" layoutY="106.0" prefWidth="131.0" />
+                                                <Button fx:id="btnAgregar" layoutX="541.0" layoutY="108.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: E9B04C;" text="Agregar" textFill="WHITE" />
+                                                <TextArea fx:id="txtDescripcion" layoutX="157.0" layoutY="141.0" prefHeight="76.0" prefWidth="378.0" />
+                                            </children>
+                                        </Pane>
+                                        <Pane layoutX="13.0" layoutY="347.0" prefHeight="176.0" prefWidth="642.0" styleClass="yellow_background">
+                                            <children>
+                                                <TableView fx:id="tableViewSeleccion" layoutX="14.0" layoutY="14.0" prefHeight="142.0" prefWidth="617.0" />
+                                            </children>
+                                        </Pane>
+                                        <Pane layoutX="13.0" layoutY="39.0" prefHeight="32.0" prefWidth="640.0" styleClass="ap_background-color_purple">
+                                            <children>
+                                                <Label layoutX="279.0" layoutY="3.0" styleClass="lbl_titulo_agrupador" text="Definición" />
+                                            </children>
+                                        </Pane>
+                                        <Pane layoutX="12.0" layoutY="315.0" prefHeight="32.0" prefWidth="644.0" styleClass="ap_background-color_purple">
+                                            <children>
+                                                <Label layoutX="283.0" layoutY="1.0" styleClass="lbl_titulo_agrupador" text="Selección" />
+                                            </children>
+                                        </Pane>
+                                        <Label layoutX="25.0" layoutY="527.0" text="Doble Click Eliminar Registro Seleccionado" /><Label fx:id="labelTEUbigeo" layoutX="15.0" layoutY="14.0" prefHeight="21.0" prefWidth="515.0" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="Lista">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                    <children>
+                                        <TableView fx:id="tableViewRegistros" layoutX="9.0" layoutY="6.0" prefHeight="403.0" prefWidth="653.0" />
+                                        <Label layoutX="15.0" layoutY="425.0" prefHeight="29.0" prefWidth="215.0" text="Doble Click Seleccionar Registro" />
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </children>
+        </AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

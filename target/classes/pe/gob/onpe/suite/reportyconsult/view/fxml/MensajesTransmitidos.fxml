@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="reporconsult_relapuesta_ap_main,ap_background-color_gainsboro" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.MensajesTransmitidosController">
+    <children>
+        <AnchorPane layoutX="520.0" layoutY="-51.0" prefHeight="200.0" prefWidth="200.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                        <TableView fx:id="tablaPrincipal" layoutX="24.0" layoutY="283.0" prefHeight="250.0" prefWidth="830.0" styleClass="ap_background-color_white" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="283.0">
+                            <columns>
+                                <TableColumn fx:id="codigo" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Codigo" />
+                                <TableColumn fx:id="descripcion" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="398.0" text="Centro de Computo" />
+                                    <TableColumn fx:id="enlace" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="130.0" text="Medio de &#10; Enlace" />
+                                    <TableColumn fx:id="fenvio" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="195.0" text="Fecha/Horario&#10;Envío CC" />
+                                    <TableColumn fx:id="frecepcion" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="195.0" text="Fecha/Horario&#10;Recepción CC" />
+                                    <TableColumn fx:id="estado" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="130.0" text="Estado" />
+                                    <TableColumn fx:id="tipo" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="90.0" text="Tipo" />
+                            </columns>
+                        </TableView>
+                <Pane layoutX="24.0" layoutY="55.0" prefHeight="34.0" prefWidth="796.0" styleClass="ap_background-color_purple" AnchorPane.leftAnchor="15.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="5.0" prefHeight="24.0" prefWidth="796.0" styleClass="lbl_titulo_agrupador" text="Criterio de Selección" />
+                    </children>
+                </Pane>
+                <Pane layoutX="522.0" layoutY="57.0" prefHeight="34.0" prefWidth="450.0" styleClass="ap_background-color_purple" AnchorPane.rightAnchor="15.0">
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="5.0" prefHeight="24.0" prefWidth="450.0" styleClass="lbl_titulo_agrupador" text="Configuración de Actualización de Datos" />
+                    </children>
+                </Pane>
+                <Pane layoutX="24.0" layoutY="89.0" prefHeight="177.0" prefWidth="796.0" styleClass="ap_background-color_white" AnchorPane.leftAnchor="15.0">
+                    <children>
+                        <ComboBox fx:id="cmbCentroComp" layoutX="160.0" layoutY="10.0" prefWidth="500.0" />
+                        <ComboBox fx:id="cmbEstado" layoutX="160.0" layoutY="42.0" prefWidth="500.0" />
+                        <ComboBox fx:id="cmbMensaje" layoutX="160.0" layoutY="76.0" prefWidth="500.0" />
+                        <ComboBox fx:id="cmbConexion" layoutX="160.0" layoutY="108.0" prefWidth="500.0" />
+                        <ComboBox fx:id="cmbTiposcc" layoutX="160.0" layoutY="142.0" prefWidth="500.0" />
+                        <Label layoutX="22.0048828125" layoutY="12.0" styleClass="lbl_color" text="Centro de Computo:" />
+                        <Label layoutX="22.009765625" layoutY="44.0" styleClass="lbl_color" text="Estado:" />
+                        <Label layoutX="23.0146484375" layoutY="78.0" styleClass="lbl_color" text="Tipo de Mensaje:" />
+                        <Label layoutX="22.01953125" layoutY="110.0" styleClass="lbl_color" text="Conexión:" />
+                        <Label layoutX="23.009765625" layoutY="142.0" styleClass="lbl_color" text="Tipo:" />
+                    </children>
+                </Pane>
+                <Pane layoutX="522.0" layoutY="91.0" prefHeight="94.0" prefWidth="450.0" styleClass="ap_background-color_white" AnchorPane.rightAnchor="15.0">
+                    <children>
+                        <TextField fx:id="loadTime" alignment="CENTER" layoutX="143.0" layoutY="26.0" prefWidth="61.0" text="5" />
+                        <Button layoutX="301.0" layoutY="10.0" mnemonicParsing="false" onAction="#btnActualizarOnAction" prefHeight="65.0" prefWidth="87.0" styleClass="btn_actualizar" text="ACTUALIZAR" />
+                        <Label layoutX="96.0" layoutY="29.0" styleClass="lbl_color" text="Cada:" />
+                        <Label layoutX="215.0" layoutY="29.0" styleClass="lbl_color" text="minutos" />
+                    </children>
+                </Pane>
+                <Label layoutX="25.0048828125" layoutY="567.0" styleClass="lbl_color" text="Pendiente:" AnchorPane.bottomAnchor="105.0" />
+                <Label layoutX="218.0048828125" layoutY="567.0" styleClass="lbl_color" text="Realizada:" AnchorPane.bottomAnchor="105.0" />
+                <Label layoutX="419.0048828125" layoutY="567.0" styleClass="lbl_color" text="Total:" AnchorPane.bottomAnchor="105.0" />
+                <TextField editable="false" layoutX="103.0" layoutY="567.0" prefHeight="21.0" prefWidth="52.0" styleClass="txt_field,ap_background-color_naranja" AnchorPane.bottomAnchor="105.0" />
+                <TextField editable="false" layoutX="298.0" layoutY="567.0" prefHeight="21.0" prefWidth="52.0" styleClass="txt_field,ap_background-color_amarillo" AnchorPane.bottomAnchor="105.0" />
+                <Label fx:id="sumaPendientes" layoutX="163.0048828125" layoutY="567.0" styleClass="lbl_color" AnchorPane.bottomAnchor="105.0" />
+                <Label fx:id="sumaRealizada" layoutX="360.0" layoutY="567.0" styleClass="lbl_color" AnchorPane.bottomAnchor="105.0" />
+                <Label fx:id="sumaTotal" layoutX="463.0" layoutY="567.0" styleClass="lbl_color" AnchorPane.bottomAnchor="105.0" />
+            </children>
+        </AnchorPane>
+                <AnchorPane layoutY="600.0" prefHeight="64.0" styleClass="ap_background-color_electricbue" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0">
+                    <children>
+                        <HBox layoutX="593.0" layoutY="-32.0" prefHeight="100.0" prefWidth="278.0" styleClass="hbox_botones" AnchorPane.rightAnchor="15.0">
+                            <children>
+                                <Button fx:id="btnConsultar" mnemonicParsing="false" onAction="#btnConsultarOnAction" prefHeight="83.0" prefWidth="185.0" styleClass="btn_consultar" text="CONSULTAR" />
+                                <Button fx:id="btnImprimir" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                                <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+    </children>
+    <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+</AnchorPane>

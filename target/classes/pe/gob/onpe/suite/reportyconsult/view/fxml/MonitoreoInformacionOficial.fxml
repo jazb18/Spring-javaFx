@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="300.0" prefWidth="825.0" styleClass="reporconsult_monitoreoinfo_ap_main,ap_background-color_gainsboro" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.gob.onpe.suite.reportyconsult.controller.MonitoreoInformacionOficialController">
+    <children><AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="bodyComun" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+<children>
+        <AnchorPane layoutX="2.0" layoutY="557.0" prefHeight="64.0" prefWidth="902.0" styleClass="ap_bottom" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+        <Pane layoutX="24.0" layoutY="51.0" prefHeight="34.0" prefWidth="1230.0" styleClass="ap_background-color_purple" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+            <children>
+                <Label layoutX="523.0" layoutY="3.0" prefHeight="27.0" prefWidth="185.0" styleClass="lbl_titulo_agrupador" text="Criterio de Selección" textAlignment="CENTER" />
+            </children>
+        </Pane>
+        <Pane fx:id="paneSeleccion" layoutX="24.0" layoutY="85.0" prefHeight="178.0" prefWidth="1230.0" styleClass="ap_background-color_white" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" />
+        <Pane layoutX="24.0" layoutY="284.0" prefHeight="34.0" prefWidth="1230.0" styleClass="ap_background-color_electricbue,resplandor_ap_main" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0">
+            <children>
+                <Label alignment="CENTER" layoutY="5.0" prefHeight="25.0" prefWidth="1240.0" styleClass="lbl_subtitulo_aplicativo_RC" text="Resultado de Consulta" textAlignment="CENTER" />
+            </children>
+        </Pane><Pane fx:id="scrollPaneTableConsult" layoutX="24.0" layoutY="318.0" prefHeight="250.0" prefWidth="1230.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" /><Label fx:id="labelHidden" layoutX="482.0" layoutY="263.0" prefHeight="21.0" prefWidth="326.0" />
+                <HBox layoutX="977.0" layoutY="590.0" styleClass="hbox_botones" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="977.0" AnchorPane.rightAnchor="34.0">
+<children>
+                         <Button fx:id="btnConsultar" layoutX="734.5" layoutY="-38.5" mnemonicParsing="false" onAction="#btnConsultarOnAction" prefHeight="83.0" prefWidth="101.0" styleClass="btn_consultar" text="CONSULTAR" />
+                        <Button fx:id="btnImprimir" layoutX="838.5" layoutY="-38.5" mnemonicParsing="false" onAction="#btnImprimirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_imprimir" text="IMPRIMIR" />
+                        <Button fx:id="btnSalir" layoutX="942.5" layoutY="-38.5" mnemonicParsing="false" onAction="#btnSalirOnAction" prefHeight="83.0" prefWidth="63.0" styleClass="btn_salir" text="SALIR" />
+</children>
+                </HBox>
+</children></AnchorPane>
+       
+    </children>
+      <stylesheets>       
+        <URL value="@../../../../../../../../../../../suiteCommon/src/main/resources/pe/gob/onpe/suite/common/view/css/mainCommon.css" />
+        <URL value="@../css/mainLocal.css" />
+    </stylesheets>
+    
+</AnchorPane>

@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reportResumenActas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="30a7cec1-6ccd-49bb-9cdb-f209e2950a79">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="unidadSoporte" class="java.lang.String"/>
+	<parameter name="tituloPrincipal" class="java.lang.String"/>
+	<parameter name="tituloSecundario" class="java.lang.String"/>
+	<parameter name="url_imagen" class="java.io.InputStream"/>
+	<parameter name="servidor" class="java.lang.String"/>
+	<parameter name="usuario" class="java.lang.String"/>
+	<parameter name="estacion" class="java.lang.String"/>
+	<parameter name="reporte" class="java.lang.String"/>
+	<parameter name="totalActas" class="java.lang.String"/>
+	<parameter name="totalProcesadas" class="java.lang.String"/>
+	<parameter name="totalporcActaProc" class="java.lang.String"/>
+	<parameter name="totalActasContab" class="java.lang.String"/>
+	<parameter name="totalPorcActaContab" class="java.lang.String"/>
+	<parameter name="sinvaloroficial" class="java.lang.String"/>
+	<parameter name="descEstados" class="java.lang.String"/>
+	<parameter name="TipoCombo" class="java.lang.String"/>
+	<parameter name="DescriTipoCmb" class="java.lang.String"/>
+	<parameter name="totalActaObserv" class="java.lang.String"/>
+	<parameter name="totalPorcActaObserv" class="java.lang.String"/>
+	<parameter name="tipoEleccion" class="java.lang.String"/>
+	<parameter name="version" class="java.lang.String"/>
+	<field name="codigo" class="java.lang.String"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<field name="fecha_ult_modif" class="java.lang.String"/>
+	<field name="mesas_habiles" class="java.lang.String"/>
+	<field name="actas_procesadas" class="java.lang.String"/>
+	<field name="porc_procesadas" class="java.lang.String"/>
+	<field name="actas_computadas" class="java.lang.String"/>
+	<field name="porc_computadas" class="java.lang.String"/>
+	<field name="actas_observadas" class="java.lang.String"/>
+	<field name="porc_observadas" class="java.lang.String"/>
+	<background>
+		<band height="802" splitType="Stretch">
+			<printWhenExpression><![CDATA[$P{sinvaloroficial}!=""]]></printWhenExpression>
+			<textField>
+				<reportElement mode="Transparent" x="26" y="288" width="502" height="227" forecolor="#C0C0C0" backcolor="#9999FF" uuid="1dcb0398-fa07-4c24-8e60-a87c812470bc">
+					<property name="ireport.layer" value="2"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="72"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{sinvaloroficial}]]></textFieldExpression>
+			</textField>
+		</band>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="152" splitType="Stretch">
+			<staticText>
+				<reportElement x="17" y="117" width="90" height="15" uuid="3fbcd4a8-9879-4da4-b42d-2393196060c8"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Estados :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="122" y="117" width="130" height="15" uuid="3f54a802-57fd-45c0-8862-c2e4f8f7e7ea"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{descEstados}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="17" y="98" width="105" height="15" uuid="ab482c24-d2b3-4c8e-8cfb-65b7c564dc53"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Unidad de Soporte:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="321" y="98" width="100" height="15" uuid="864186f5-eedd-44ed-a24c-9d2cafaa4a0b"/>
+				<textElement>
+					<font fontName="Arial" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{TipoCombo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="426" y="98" width="127" height="15" uuid="0725e002-331d-472d-bff8-8f4acfa23874"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{DescriTipoCmb}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="122" y="98" width="181" height="15" uuid="a270aca3-1d2a-411b-abd6-fbf5f6b4d8a8"/>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{unidadSoporte}]]></textFieldExpression>
+			</textField>
+			<image onErrorType="Blank">
+				<reportElement x="1" y="0" width="80" height="80" uuid="65dbad3f-2460-408a-9594-98ac9f5e9320"/>
+				<imageExpression><![CDATA[$P{url_imagen}]]></imageExpression>
+			</image>
+			<textField evaluationTime="Report">
+				<reportElement x="521" y="34" width="32" height="15" uuid="ae395f84-78fd-446d-b18b-4cb99d7ee245"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm:ss">
+				<reportElement x="497" y="18" width="56" height="15" uuid="7a5f0b8c-c8cb-40b7-a0ff-feeb2cfbc34d"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="453" y="34" width="42" height="15" uuid="0a52a050-49e3-4544-90ff-20864b4a8b26"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Página  :]]></text>
+			</staticText>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="496" y="1" width="57" height="15" uuid="825add21-dacc-4253-bb49-5fefaf3f5df9"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="453" y="18" width="42" height="15" uuid="abf61923-f08f-4c51-b8d1-c6b818c7eb52"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora     :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="453" y="1" width="42" height="15" uuid="1af05ccb-0a08-4f34-a21e-a0504fb6eb79"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha   :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="97" y="44" width="350" height="18" forecolor="#000000" uuid="efeff81a-6491-411d-9cd0-843992b08b23"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tituloSecundario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="1" width="350" height="18" forecolor="#7F7F7F" uuid="b425cf34-5e46-48ed-8e43-8bc552d0981c"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tituloPrincipal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="497" y="34" width="24" height="15" uuid="b87b66ac-c77b-412a-b318-d26a544aa10b"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + " de"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="97" y="22" width="350" height="18" forecolor="#000000" uuid="a7a971ac-8ece-45ce-b85f-8b06cc7e5a22"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{tipoEleccion}.equals("10")? "PRESIDENTE Y VICEPRESIDENTE" :
+$P{tipoEleccion}.equals("11")? "CONGRESALES":
+$P{tipoEleccion}.equals("12")? "PARLAMENTO ANDINO" :
+$P{tipoEleccion}.equals("CO")? "CONSOLIDADO" :""]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="36" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="36" forecolor="#E4E4E4" backcolor="#E4E4E4" uuid="e294aaaf-1ca3-4582-ac23-bf0c8acf5040"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="45" height="36" uuid="af99eeea-071e-4854-9455-11adfb6881ec"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Código]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="156" y="0" width="100" height="36" uuid="a1ad0239-3b63-4a5d-9173-5d126b018b7f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Última Modificación]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="0" width="39" height="36" uuid="91b0aa3d-591d-4631-a898-57bbf85cad7d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total de Actas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="295" y="0" width="56" height="36" uuid="688ddbda-5d71-450f-a14b-db201c467205"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Actas
+Procesadas(Recibidas)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="351" y="0" width="41" height="36" uuid="0568e984-45fd-4196-9b7b-165c7f1d679e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[% Actas Proc.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="0" width="38" height="36" uuid="d2cb568d-2332-40d0-bd49-73f236a88d50"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Actas Contab.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="43" height="36" uuid="033cd2e8-c773-481e-94de-541d69adc568"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[%Actas Contab.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="473" y="0" width="41" height="36" uuid="8450b37b-dcfc-4948-b811-c764c7bef140"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[(*) Actas Observ.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="514" y="0" width="41" height="36" uuid="4e87897f-64b5-46e4-9bd0-e1519f7f148b"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[%Actas Observ.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="45" y="0" width="111" height="36" uuid="b6f58993-cce7-4b0c-b199-ce75c066a45a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ODPE]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="45" height="20" uuid="f4edd8f1-452f-40cc-9cd2-77332cb50499"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="45" y="0" width="111" height="20" uuid="b6193f6a-b484-446b-8c50-ccee12ce4c3a"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="256" y="0" width="39" height="20" uuid="aeafa8b2-8aad-4f88-9ec9-522dd478b1a7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mesas_habiles}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="0" width="56" height="20" uuid="733afb2b-1316-4230-a893-29cd55079136"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{actas_procesadas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="0" width="41" height="20" uuid="5e559a97-ef9b-47e2-81d6-1e1259eef4df"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{porc_procesadas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="43" height="20" uuid="0a037aed-adfb-493c-929c-670fb4a981a4"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{porc_computadas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="0" width="41" height="20" uuid="14996475-149a-47ea-a6a7-0baeca335975"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{actas_observadas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="156" y="0" width="100" height="20" uuid="a83d6ffa-0c10-471e-ae07-2c794e3a6d5d"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fecha_ult_modif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="0" width="38" height="20" uuid="ae7c9279-0266-4869-8e84-96c267b176e7"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{actas_computadas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="0" width="41" height="20" uuid="e7608f7a-aa98-40b7-affc-524d99f5e994"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{porc_observadas}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="37" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="3" y="6" width="40" height="15" uuid="f851d944-3fee-4e00-9133-9086aeaa5b71"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Servidor :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="359" y="6" width="86" height="27" uuid="d85ab4e7-73e7-4aae-a16f-5e58fabbd422"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{estacion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="445" y="6" width="50" height="15" uuid="ff496c9f-0604-4a6b-9cff-82ac995f203e"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reporte :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="222" y="6" width="93" height="27" uuid="cf57b830-09f8-48f2-9c5b-5513eea1a554"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{usuario}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="180" y="6" width="42" height="15" uuid="f3ce3be5-4203-4286-8c5c-72d6e5e0d6b0"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Usuario :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="44" y="6" width="132" height="27" uuid="0225d263-0234-4ec2-b946-d0ed0e222288"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{servidor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="497" y="6" width="56" height="15" uuid="ef5f14a1-af0b-4c89-8b73-f76e736ade65"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{reporte}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="317" y="6" width="41" height="15" uuid="513d0d6c-ca0e-4dde-8002-47313a76bd2c"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Estación :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="445" y="21" width="50" height="15" uuid="26a08c36-62e3-400a-9a50-d320424257c9"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Versión  :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="495" y="21" width="58" height="15" uuid="ff90b7a0-a558-4c3b-9249-d11981ac1c83"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{version}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="35" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="21" forecolor="#E4E4E4" backcolor="#E4E4E4" uuid="5610dc05-9330-4124-a13a-1ee0aaae6710"/>
+				<graphicElement>
+					<pen lineWidth="0.25" lineColor="#999999"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="256" height="21" uuid="5c80da59-c9a6-41d5-817a-37dd4e5bcbbb"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="256" y="0" width="39" height="21" uuid="ad27abb4-79bc-40a5-99e5-c7bcc0962e69"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalActas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="43" height="21" uuid="c2418dfe-bab0-41b4-a144-a2b769aa0524"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalPorcActaContab}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="295" y="0" width="56" height="21" uuid="57f174ea-063f-455d-8a90-5e1ad47e4e7e"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalProcesadas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="351" y="0" width="41" height="21" uuid="53f3f57b-641a-488b-8fd4-856b73949689"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalporcActaProc}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="392" y="0" width="38" height="21" uuid="845e2bc6-ea1c-40ad-8a29-83bfabc15347"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalActasContab}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="0" width="41" height="21" uuid="784ef950-9fae-47b7-82fb-d3b77874832f"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalActaObserv}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="514" y="0" width="41" height="21" uuid="4674f993-aba9-4196-b243-0daef01d9968"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Arial" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{totalPorcActaObserv}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="3" y="24" width="344" height="11" uuid="59b2a019-f58d-4a52-b52a-c9d00619f8cb"/>
+				<textElement>
+					<font fontName="Arial" size="7" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[(*) Actas Observadas: Aquellas actas pendientes de resolución por parte de los JEE o los JNE.]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
